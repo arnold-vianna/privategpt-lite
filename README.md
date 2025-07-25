@@ -18,7 +18,7 @@
 
 - ⚙️ 100% CPU-only — no GPU or cloud required  
 
-- 📚 Easily ingest `.json`, `.txt`, or `.sqlite` files  
+- 📚 Easily ingest `.json`, `.txt`,  files  
 
 - 🔍 FAISS-powered local semantic search  
 
