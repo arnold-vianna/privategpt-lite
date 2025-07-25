@@ -1,2974 +1,745 @@
 [
-    {
-        "command": "python3 -m http.server 9000",
-        "description": "Python Server"
-    },
-    {
-        "command": "nc -lvnp 4444",
-        "description": "Nc Server"
-    },
-    {
-        "command": "sudo netstat -tuln",
-        "description": "Check open ports"
-    },
-    {
-        "command": "sudo dpkg -i file.deb",
-        "description": "To install a .deb file"
-    },
-    {
-        "command": "df -h",
-        "description": "check used space via cli"
-    },
-    {
-        "command": "streamlit run app.py --server.port 8899",
-        "description": "Streamlit"
-    },
-    {
-        "command": "sudo dhclient -r",
-        "description": "Release the current lease"
-    },
-    {
-        "command": "sudo dhclient",
-        "description": "Renew the lease and obtain a new IP"
-    },
-    {
-        "command": "sudo cp ghupdater.py /usr/local/bin",
-        "description": "Run script no full path"
-    },
-    {
-        "command": "sudo apt-get upgrade --fix-missing",
-        "description": "Fix broken apt install"
-    },
-    {
-        "command": "nmap -sV <target>",
-        "description": "Probe open ports to determine service/version info"
-    },
-    {
-        "command": "nmap -O <target>",
-        "description": "Determine the OS of the target"
-    },
-    {
-        "command": "nmap -A <target>",
-        "description": "Enable OS detection, version detection, script scanning, and traceroute"
-    },
-    {
-        "command": "nmap -p <port_range> <target>",
-        "description": "Only scan specified ports"
-    },
-    {
-        "command": "nmap -p- <target>",
-        "description": "Scan all ports"
-    },
-    {
-        "command": "nmap --top-ports <number> <target>",
-        "description": "Scan <number> most common ports"
-    },
-    {
-        "command": "nmap -sU -sV -sC --script=all <target>",
-        "description": "UDP scan with version detection and default scripts"
-    },
-    {
-        "command": "nmap --script=<script_name> <target>",
-        "description": "Run individual NSE scripts"
-    },
-    {
-        "command": "nmap --script-args=<script_args> <target>",
-        "description": "Provide arguments to NSE scripts"
-    },
-    {
-        "command": "nmap --script-args-file=<file_name> <target>",
-        "description": "Provide NSE script args from a file"
-    },
-    {
-        "command": "nmap --script-help=<script_name>",
-        "description": "Display help for individual scripts"
-    },
-    {
-        "command": "nmap --script-trace <target>",
-        "description": "Show all data sent and received"
-    },
-    {
-        "command": "nmap --script-updatedb <target>",
-        "description": "Update the script database"
-    },
-    {
-        "command": "nmap -iL <input_file>",
-        "description": "Scan targets from a list in a file"
-    },
-    {
-        "command": "nmap -iR <number>",
-        "description": "Choose random targets"
-    },
-    {
-        "command": "nmap --exclude <target1,target2,...>,<targetN>",
-        "description": "Exclude targets from a scan"
-    },
-    {
-        "command": "nmap --excludefile <exclude_file>",
-        "description": "Exclude targets using a list in a file"
-    },
-    {
-        "command": "nmap -Pn <target>",
-        "description": "Treat all hosts as online -- skip host discovery"
-    },
-    {
-        "command": "nmap -v <target>",
-        "description": "Verbose output"
-    },
-    {
-        "command": "nmap -d <target>",
-        "description": "Debugging output"
-    },
-    {
-        "command": "nmap --reason <target>",
-        "description": "Display the reason a port is in a particular state"
-    },
-    {
-        "command": "nmap --open <target>",
-        "description": "Only show open (or possibly open) ports"
-    },
-    {
-        "command": "nmap --packet-trace <target>",
-        "description": "Show all packets sent and received"
-    },
-    {
-        "command": "nmap -sV --version-intensity <level> <target>",
-        "description": "Set from 0 (light) to 9 (try all probes)"
-    },
-    {
-        "command": "nmap -sV --version-light <target>",
-        "description": "Try the most likely probes (intensity 2)"
-    },
-    {
-        "command": "nmap -sV --version-all <target>",
-        "description": "Try all possible probes (intensity 9)"
-    },
-    {
-        "command": "nmap --script-args=unsafe=1 <target>",
-        "description": "Some scripts require this option"
-    },
-    {
-        "command": "nmap -6 <target>",
-        "description": "Enable IPv6 scanning"
-    },
-    {
-        "command": "nmap -sn <target>",
-        "description": "Disable port scan"
-    },
-    {
-        "command": "nmap -e <interface> <target>",
-        "description": "Specify a network interface"
-    },
-    {
-        "command": "nmap -S <spoof_ip> <target>",
-        "description": "Spoof source address"
-    },
-    {
-        "command": "nmap --proxies <proxy_list> <target>",
-        "description": "Relay connections through HTTP/SOCKS4 proxies"
-    },
-    {
-        "command": "nmap --data-length <size> <target>",
-        "description": "Append random data to sent packets"
-    },
-    {
-        "command": "nmap --source-port <port> <target>",
-        "description": "Send packets from a specified source port"
-    },
-    {
-        "command": "nmap --min-parallelism <number> <target>",
-        "description": "Number of probes in parallel"
-    },
-    {
-        "command": "nmap --max-parallelism <number> <target>",
-        "description": "Maximum number of probes in parallel"
-    },
-    {
-        "command": "nmap --min-hostgroup <number> <target>",
-        "description": "Minimum host group size"
-    },
-    {
-        "command": "nmap --max-hostgroup <number> <target>",
-        "description": "Maximum host group size"
-    },
-    {
-        "command": "nmap --min-rtt-timeout <time> <target>",
-        "description": "Specified in milliseconds"
-    },
-    {
-        "command": "nmap --max-rtt-timeout <time> <target>",
-        "description": "Specified in milliseconds"
-    },
-    {
-        "command": "nmap --initial-rtt-timeout <time> <target>",
-        "description": "Specified in milliseconds"
-    },
-    {
-        "command": "nmap --max-scan-delay <time> <target>",
-        "description": "Adjust delay between packets"
-    },
-    {
-        "command": "nmap --scan-delay <time> <target>",
-        "description": "Adjust delay between packets"
-    },
-    {
-        "command": "nmap --max-retries <number> <target>",
-        "description": "Set the max number of port scan probe retransmissions"
-    },
-    {
-        "command": "nmap --host-timeout <time> <target>",
-        "description": "Give up on target after this long"
-    },
-    {
-        "command": "nmap --script-timeout <time> <target>",
-        "description": "The script itself may set a lower timeout"
-    },
-    {
-        "command": "nmap --version-intensity <level> <target>",
-        "description": "Set from 0 (light) to 9 (try all probes)"
-    },
-    {
-        "command": "nmap --version-light <target>",
-        "description": "Try the most likely probes (intensity 2)"
-    },
-    {
-        "command": "nmap --version-all <target>",
-        "description": "Try all possible probes (intensity 9)"
-    },
-    {
-        "command": "nmap --min-rate <number> <target>",
-        "description": "Send packets no slower than <number> per second"
-    },
-    {
-        "command": "nmap --max-rate <number> <target>",
-        "description": "Send packets no faster than <number> per second"
-    },
-    {
-        "command": "nmap --defeat-rst-ratelimit <target>",
-        "description": "Defeat reset rate limits"
-    },
-    {
-        "command": "nmap --mtu <val> <target>",
-        "description": "Set your specified offset size"
-    },
-    {
-        "command": "nmap --ip-options <options> <target>",
-        "description": "Use specified IP options"
-    },
-    {
-        "command": "nmap --ttl <value> <target>",
-        "description": "Set IP time-to-live field"
-    },
-    {
-        "command": "nmap --spoof-mac <macaddress/prefix/vendor name> <target>",
-        "description": "Spoof your MAC address"
-    },
-    {
-        "command": "nmap --badsum <target>",
-        "description": "Send packets with a bogus TCP/UDP/SCTP checksum"
-    },
-    {
-        "command": "nmap -D <decoy1,decoy2,...,decoyN> <target>",
-        "description": "Cloak a scan with decoys"
-    },
-    {
-        "command": "nmap --proxies <file> <target>",
-        "description": "Relay connections through HTTP/SOCKS4 proxies"
-    },
-    {
-        "command": "nmap --data <hex_string> <target>",
-        "description": "Append a custom payload to sent packets"
-    },
-    {
-        "command": "ipconfig",
-        "description": "Display IP configuration for all network interfaces"
-    },
-    {
-        "command": "dir",
-        "description": "List files and directories in the current directory"
-    },
-    {
-        "command": "tasklist",
-        "description": "List all running processes"
-    },
-    {
-        "command": "systeminfo",
-        "description": "Display detailed information about the computer's configuration"
-    },
-    {
-        "command": "sfc /scannow",
-        "description": "Run System File Checker to scan and repair system files"
-    },
-    {
-        "command": "netstat -an",
-        "description": "Display all active network connections"
-    },
-    {
-        "command": "ping <host>",
-        "description": "Send ICMP echo requests to test network connectivity"
-    },
-    {
-        "command": "gpupdate /force",
-        "description": "Force immediate update of Group Policy settings"
-    },
-    {
-        "command": "chkdsk /f",
-        "description": "Check and repair disk errors"
-    },
-    {
-        "command": "shutdown /s /t 0",
-        "description": "Shutdown the computer immediately"
-    },
-    {
-        "command": "regedit",
-        "description": "Open the Windows Registry Editor"
-    },
-    {
-        "command": "wmic product get name,version",
-        "description": "List installed software and their versions"
-    },
-    {
-        "command": "msconfig",
-        "description": "System Configuration Utility: Configure startup options"
-    },
-    {
-        "command": "ipconfig /flushdns",
-        "description": "Flush and reset the DNS resolver cache"
-    },
-    {
-        "command": "systeminfo | findstr /B /C:\"OS Name\" /C:\"OS Version\"",
-        "description": "Get detailed OS information"
-    },
-    {
-        "command": "taskkill /F /IM <process_name>",
-        "description": "Forcefully terminate a running process"
-    },
-    {
-        "command": "powercfg /batteryreport",
-        "description": "Generate a battery health report"
-    },
-    {
-        "command": "schtasks /query",
-        "description": "List scheduled tasks"
-    },
-    {
-        "command": "net user",
-        "description": "Display user accounts information"
-    },
-    {
-        "command": "netsh wlan show profiles",
-        "description": "List all wireless network profiles"
-    },
-    {
-        "command": "netsh wlan show networks",
-        "description": "List all available wireless networks"
-    },
-    {
-        "command": "netsh wlan connect name=<network_name>",
-        "description": "Connect to a wireless network"
-    },
-    {
-        "command": "netsh interface ipv4 show config",
-        "description": "Display IPv4 network configuration"
-    },
-    {
-        "command": "netsh interface ipv6 show config",
-        "description": "Display IPv6 network configuration"
-    },
-    {
-        "command": "netsh interface ipv4 set address name=<interface_name> source=static <ip_address> <subnet_mask> <gateway>",
-        "description": "Set static IPv4 address"
-    },
-    {
-        "command": "netsh interface ipv6 set address name=<interface_name> source=static <ip_address> <prefix_length>",
-        "description": "Set static IPv6 address"
-    },
-    {
-        "command": "netsh interface ipv4 set dnsservers name=<interface_name> source=static address=none",
-        "description": "Clear DNS servers"
-    },
-    {
-        "command": "netsh interface ipv6 set dnsservers name=<interface_name> source=static address=none",
-        "description": "Clear IPv6 DNS servers"
-    },
-    {
-        "command": "netsh interface ipv4 add dnsservers name=<interface_name> address=<dns_server_address> index=<index>",
-        "description": "Add DNS server"
-    },
-    {
-        "command": "netsh interface ipv6 add dnsservers name=<interface_name> address=<dns_server_address> index=<index>",
-        "description": "Add IPv6 DNS server"
-    },
-    {
-        "command": "netsh interface portproxy add v4tov4 listenport=<listen_port> listenaddress=<listen_address> connectport=<connect_port> connectaddress=<connect_address>",
-        "description": "Add port proxy"
-    },
-    {
-        "command": "netsh interface portproxy delete v4tov4 listenport=<listen_port> listenaddress=<listen_address>",
-        "description": "Delete port proxy"
-    },
-    {
-        "command": "netsh interface ipv4 show route",
-        "description": "Display IPv4 routing table"
-    },
-    {
-        "command": "netsh interface ipv6 show route",
-        "description": "Display IPv6 routing table"
-    },
-    {
-        "command": "netsh interface ipv4 add route prefix=<prefix> mask=<mask> nexthop=<nexthop> interface=<interface_index>",
-        "description": "Add IPv4 route"
-    },
-    {
-        "command": "netsh interface ipv6 add route prefix=<prefix>/<prefix_length> nexthop=<nexthop> interface=<interface_index>",
-        "description": "Add IPv6 route"
-    },
-    {
-        "command": "netsh interface ipv4 delete route prefix=<prefix> mask=<mask>",
-        "description": "Delete IPv4 route"
-    },
-    {
-        "command": "netsh interface ipv6 delete route prefix=<prefix>/<prefix_length>",
-        "description": "Delete IPv6 route"
-    },
-    {
-        "command": "netsh advfirewall firewall add rule name=<rule_name> dir=in action=allow protocol=TCP localport=<port_number>",
-        "description": "Add firewall inbound rule for TCP"
-    },
-    {
-        "command": "netsh advfirewall firewall add rule name=<rule_name> dir=out action=allow protocol=TCP localport=<port_number>",
-        "description": "Add firewall outbound rule for TCP"
-    },
-    {
-        "command": "netsh advfirewall firewall add rule name=<rule_name> dir=in action=allow protocol=UDP localport=<port_number>",
-        "description": "Add firewall inbound rule for UDP"
-    },
-    {
-        "command": "netsh advfirewall firewall add rule name=<rule_name> dir=out action=allow protocol=UDP localport=<port_number>",
-        "description": "Add firewall outbound rule for UDP"
-    },
-    {
-        "command": "netsh advfirewall firewall delete rule name=<rule_name>",
-        "description": "Delete firewall rule"
-    },
-    {
-        "command": "netsh advfirewall firewall set rule name=<rule_name> new enable=yes",
-        "description": "Enable firewall rule"
-    },
-    {
-        "command": "netsh advfirewall firewall set rule name=<rule_name> new enable=no",
-        "description": "Disable firewall rule"
-    },
-    {
-        "command": "netsh advfirewall show allprofiles",
-        "description": "Display all firewall profiles"
-    },
-    {
-        "command": "netsh advfirewall show currentprofile",
-        "description": "Display current firewall profile"
-    },
-    {
-        "command": "netsh advfirewall set currentprofile state on",
-        "description": "Enable firewall"
-    },
-    {
-        "command": "netsh advfirewall set currentprofile state off",
-        "description": "Disable firewall"
-    },
-    {
-        "command": "netsh advfirewall set allprofiles state on",
-        "description": "Enable all firewall profiles"
-    },
-    {
-        "command": "netsh advfirewall set allprofiles state off",
-        "description": "Disable all firewall profiles"
-    },
-    {
-        "command": "netsh interface teredo show state",
-        "description": "Display Teredo network configuration"
-    },
-    {
-        "command": "netsh interface isatap set state disabled",
-        "description": "Disable ISATAP"
-    },
-    {
-        "command": "netsh interface isatap set state enabled",
-        "description": "Enable ISATAP"
-    },
-    {
-        "command": "netsh interface isatap show state",
-        "description": "Display ISATAP network configuration"
-    },
-    {
-        "command": "netsh interface 6to4 set state disabled",
-        "description": "Disable 6to4"
-    },
-    {
-        "command": "netsh interface 6to4 set state enabled",
-        "description": "Enable 6to4"
-    },
-    {
-        "command": "netsh interface 6to4 show state",
-        "description": "Display 6to4 network configuration"
-    },
-    {
-        "command": "netsh interface portproxy show all",
-        "description": "Display all port proxy settings"
-    },
-    {
-        "command": "netsh interface portproxy show v4tov4",
-        "description": "Display IPv4 to IPv4 port proxy settings"
-    },
-    {
-        "command": "netsh interface portproxy show v4tov6",
-        "description": "Display IPv4 to IPv6 port proxy settings"
-    },
-    {
-        "command": "netsh interface portproxy show v6tov4",
-        "description": "Display IPv6 to IPv4 port proxy settings"
-    },
-    {
-        "command": "netsh interface portproxy show v6tov6",
-        "description": "Display IPv6 to IPv6 port proxy settings"
-    },
-    {
-        "command": "netsh interface ipv4 show filters",
-        "description": "Display IPv4 packet filter settings"
-    },
-    {
-        "command": "netsh interface ipv6 show filters",
-        "description": "Display IPv6 packet filter settings"
-    },
-    {
-        "command": "tracert <host>",
-        "description": "Trace the route to a host"
-    },
-    {
-        "command": "nslookup <host>",
-        "description": "Query the DNS to find the IP address of a host"
-    },
-    {
-        "command": "whoami",
-        "description": "Display the username of the current user"
-    },
-    {
-        "command": "hostname",
-        "description": "Display the hostname of the computer"
-    },
-    {
-        "command": "ver",
-        "description": "Display the Windows version and other information"
-    },
-    {
-        "command": "nbtstat -A <ip_address>",
-        "description": "Display NetBIOS over TCP/IP information for a remote computer"
-    },
-    {
-        "command": "net use",
-        "description": "Display information about network connections"
-    },
-    {
-        "command": "net use \\\\<computer_name>\\<share_name> /user:<username> <password>",
-        "description": "Connect to a network drive"
-    },
-    {
-        "command": "net view",
-        "description": "Display information about network resources"
-    },
-    {
-        "command": "netstat -b",
-        "description": "Display all active TCP connections and the processes using them"
-    },
-    {
-        "command": "netstat -e",
-        "description": "Display network statistics"
-    },
-    {
-        "command": "netstat -r",
-        "description": "Display the IP routing table"
-    },
-    {
-        "command": "netstat -s",
-        "description": "Display network statistics by protocol"
-    },
-    {
-        "command": "netstat -n",
-        "description": "Display active TCP connections and the numerical addresses they are connected to"
-    },
-    {
-        "command": "netsh interface ipv4 show neighbors",
-        "description": "Display the ARP table"
-    },
-    {
-        "command": "netsh interface ipv6 show neighbors",
-        "description": "Display the neighbor cache for IPv6"
-    },
-    {
-        "command": "netsh interface ipv4 show interface",
-        "description": "Display IPv4 interface information"
-    },
-    {
-        "command": "netsh interface ipv6 show interface",
-        "description": "Display IPv6 interface information"
-    },
-    {
-        "command": "netsh interface ipv4 show tcpconnections",
-        "description": "Display active TCP connections"
-    },
-    {
-        "command": "netsh interface ipv6 show tcpconnections",
-        "description": "Display active TCP connections for IPv6"
-    },
-    {
-        "command": "netsh interface ipv4 show udpconnections",
-        "description": "Display active UDP connections"
-    },
-    {
-        "command": "netsh interface ipv6 show udpconnections",
-        "description": "Display active UDP connections for IPv6"
-    },
-    {
-        "command": "netsh interface ipv4 show ipstats",
-        "description": "Display IPv4 statistics"
-    },
-    {
-        "command": "netsh interface ipv6 show ipstats",
-        "description": "Display IPv6 statistics"
-    },
-    {
-        "command": "netsh interface ipv4 show ipinterface",
-        "description": "Display IPv4 interface statistics"
-    },
-    {
-        "command": "netsh interface ipv6 show ipinterface",
-        "description": "Display IPv6 interface statistics"
-    },
-    {
-        "command": "netsh interface ipv4 show global",
-        "description": "Display global IPv4 information"
-    },
-    {
-        "command": "netsh interface ipv6 show global",
-        "description": "Display global IPv6 information"
-    },
-    {
-        "command": "netsh interface ipv4 show subinterfaces",
-        "description": "Display IPv4 subinterface information"
-    },
-    {
-        "command": "netsh interface ipv6 show subinterfaces",
-        "description": "Display IPv6 subinterface information"
-    },
-    {
-        "command": "netsh interface ipv4 show interface <interface_name>",
-        "description": "Display detailed IPv4 interface information"
-    },
-    {
-        "command": "netsh interface ipv6 show interface <interface_name>",
-        "description": "Display detailed IPv6 interface information"
-    },
-    {
-        "command": "netsh interface ipv4 show address <interface_name>",
-        "description": "Display IPv4 address information for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv6 show address <interface_name>",
-        "description": "Display IPv6 address information for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv4 show config <interface_name>",
-        "description": "Display detailed IPv4 configuration information for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv6 show config <interface_name>",
-        "description": "Display detailed IPv6 configuration information for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv4 show route <interface_name>",
-        "description": "Display IPv4 routing table for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv6 show route <interface_name>",
-        "description": "Display IPv6 routing table for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv4 show neighbors <interface_name>",
-        "description": "Display the ARP table for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv6 show neighbors <interface_name>",
-        "description": "Display the neighbor cache for IPv6 for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv4 show tcpconnections <interface_name>",
-        "description": "Display active TCP connections for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv6 show tcpconnections <interface_name>",
-        "description": "Display active TCP connections for IPv6 for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv4 show udpconnections <interface_name>",
-        "description": "Display active UDP connections for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv6 show udpconnections <interface_name>",
-        "description": "Display active UDP connections for IPv6 for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv4 show ipstats <interface_name>",
-        "description": "Display IPv4 statistics for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv6 show ipstats <interface_name>",
-        "description": "Display IPv6 statistics for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv4 show ipinterface <interface_name>",
-        "description": "Display IPv4 interface statistics for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv6 show ipinterface <interface_name>",
-        "description": "Display IPv6 interface statistics for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv4 show global <interface_name>",
-        "description": "Display global IPv4 information for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv6 show global <interface_name>",
-        "description": "Display global IPv6 information for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv4 show subinterfaces <interface_name>",
-        "description": "Display IPv4 subinterface information for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv4 set address <interface_name> static <ip_address> <subnet_mask> <gateway>",
-        "description": "Set a static IPv4 address for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv6 set address <interface_name> static <ip_address> <prefix_length>",
-        "description": "Set a static IPv6 address for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv4 set dnsservers <interface_name> static <dns_server_address>",
-        "description": "Set a static DNS server for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv4 add dnsservers <interface_name> <dns_server_address> index=<index>",
-        "description": "Add a DNS server for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv4 set address <interface_name> dhcp",
-        "description": "Set a DHCP IPv4 address for a specific interface"
-    },
-    {
-        "command": "netsh interface ipv6 set address <interface_name> dhcp <dhcp_server_address>",
-        "description": "Set a DHCP IPv6 address for a specific interface with a specific DHCP server"
-    },
-    {
-        "command": "netsh interface ipv6 set address <interface_name> dhcp <dhcp_server_address> <dhcp_server_address2>",
-        "description": "Set a DHCP IPv6 address for a specific interface with two DHCP servers"
-    },
-    {
-        "command": "netsh interface ipv6 set address <interface_name> dhcp <dhcp_server_address> <dhcp_server_address2> <dhcp_server_address3>",
-        "description": "Set a DHCP IPv6 address for a specific interface with three DHCP servers"
-    },
-    {
-        "command": "netsh interface ipv6 set address <interface_name> dhcp <dhcp_server_address> <dhcp_server_address2> <dhcp_server_address3> <dhcp_server_address4>",
-        "description": "Set a DHCP IPv6 address for a specific interface with four DHCP servers"
-    },
-    {
-        "command": "ipconfig /all",
-        "description": "Display detailed IP configuration for all network interfaces"
-    },
-    {
-        "command": "driverquery",
-        "description": "List all installed device drivers"
-    },
-    {
-        "command": "systeminfo | findstr /C:\"Total Physical Memory\"",
-        "description": "Display total physical memory"
-    },
-    {
-        "command": "echo %username%",
-        "description": "Display the currently logged-in username"
-    },
-    {
-        "command": "echo %computername%",
-        "description": "Display the computer name"
-    },
-    {
-        "command": "tasklist /svc",
-        "description": "List all running processes and their associated services"
-    },
-    {
-        "command": "gpresult /r",
-        "description": "Display Resultant Set of Policy for the current user"
-    },
-    {
-        "command": "fsutil fsinfo drives",
-        "description": "List all drives on the system"
-    },
-    {
-        "command": "fsutil volume diskfree C:",
-        "description": "Display free space on drive C:"
-    },
-    {
-        "command": "wmic bios get serialnumber",
-        "description": "Retrieve the computer's serial number"
-    },
-    {
-        "command": "wmic os get lastbootuptime",
-        "description": "Display the last system boot time"
-    },
-    {
-        "command": "driverquery /v",
-        "description": "Display detailed information about installed drivers"
-    },
-    {
-        "command": "systeminfo | findstr /C:\"Domain\" /C:\"Logon Server\"",
-        "description": "Display domain and logon server information"
-    },
-    {
-        "command": "tasklist /fi \"status eq running\"",
-        "description": "List running processes"
-    },
-    {
-        "command": "tasklist /fi \"memusage gt 100000\"",
-        "description": "List processes with memory usage greater than 100,000 KB"
-    },
-    {
-        "command": "systeminfo | findstr /C:\"System Type\"",
-        "description": "Display whether the system is 32-bit or 64-bit"
-    },
-    {
-        "command": "wmic qfe list",
-        "description": "List installed Windows updates"
-    },
-    {
-        "command": "systeminfo | findstr /C:\"Boot Device\"",
-        "description": "Display the boot device"
-    },
-    {
-        "command": "fsutil fsinfo ntfsinfo C:",
-        "description": "Display NTFS file system information for drive C:"
-    },
-    {
-        "command": "ver | findstr /B /C:\"Version\"",
-        "description": "Display the Windows version using ver command"
-    },
-    {
-        "command": "systeminfo | findstr /C:\"Install Date\"",
-        "description": "Display the Windows installation date"
-    },
-    {
-        "command": "wmic process list brief",
-        "description": "List running processes in brief format"
-    },
-    {
-        "command": "wmic logicaldisk get deviceid, volumename, freespace, size",
-        "description": "Display information about logical disks"
-    },
-    {
-        "command": "SHOW DATABASES;",
-        "description": "List all databases"
-    },
-    {
-        "command": "USE database_name;",
-        "description": "Select a database to use"
-    },
-    {
-        "command": "SHOW TABLES;",
-        "description": "List all tables in the current database"
-    },
-    {
-        "command": "DESCRIBE table_name;",
-        "description": "Show the structure of a table"
-    },
-    {
-        "command": "SELECT column_name FROM table_name;",
-        "description": "Select data from a table"
-    },
-    {
-        "command": "SELECT * FROM table_name;",
-        "description": "Select all columns from a table"
-    },
-    {
-        "command": "INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);",
-        "description": "Insert data into a table"
-    },
-    {
-        "command": "UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;",
-        "description": "Update data in a table"
-    },
-    {
-        "command": "DELETE FROM table_name WHERE condition;",
-        "description": "Delete data from a table"
-    },
-    {
-        "command": "CREATE DATABASE database_name;",
-        "description": "Create a new database"
-    },
-    {
-        "command": "DROP DATABASE database_name;",
-        "description": "Delete a database"
-    },
-    {
-        "command": "CREATE TABLE table_name (column1 datatype, column2 datatype, ...);",
-        "description": "Create a new table"
-    },
-    {
-        "command": "DROP TABLE table_name;",
-        "description": "Delete a table"
-    },
-    {
-        "command": "ALTER TABLE table_name ADD column_name datatype;",
-        "description": "Add a column to a table"
-    },
-    {
-        "command": "ALTER TABLE table_name DROP COLUMN column_name;",
-        "description": "Delete a column from a table"
-    },
-    {
-        "command": "ALTER TABLE table_name MODIFY COLUMN column_name datatype;",
-        "description": "Modify the data type of a column"
-    },
-    {
-        "command": "CREATE INDEX index_name ON table_name (column_name);",
-        "description": "Create an index on a table"
-    },
-    {
-        "command": "DROP INDEX index_name ON table_name;",
-        "description": "Delete an index from a table"
-    },
-    {
-        "command": "CREATE USER 'username'@'host' IDENTIFIED BY 'password';",
-        "description": "Create a new user"
-    },
-    {
-        "command": "GRANT permission ON database_name.table_name TO 'username'@'host';",
-        "description": "Grant permissions to a user"
-    },
-    {
-        "command": "REVOKE permission ON database_name.table_name FROM 'username'@'host';",
-        "description": "Revoke permissions from a user"
-    },
-    {
-        "command": "SHOW GRANTS FOR 'username'@'host';",
-        "description": "Show the permissions granted to a user"
-    },
-    {
-        "command": "RENAME TABLE old_table_name TO new_table_name;",
-        "description": "Rename a table"
-    },
-    {
-        "command": "TRUNCATE TABLE table_name;",
-        "description": "Delete all data from a table"
-    },
-    {
-        "command": "BACKUP DATABASE database_name TO DISK = 'filepath';",
-        "description": "Backup a database"
-    },
-    {
-        "command": "RESTORE DATABASE database_name FROM DISK = 'filepath';",
-        "description": "Restore a database from a backup"
-    },
-    {
-        "command": "CREATE VIEW view_name AS SELECT column1, column2 FROM table_name WHERE condition;",
-        "description": "Create a new view"
-    },
-    {
-        "command": "DROP VIEW view_name;",
-        "description": "Delete a view"
-    },
-    {
-        "command": "CREATE PROCEDURE procedure_name() BEGIN ... END;",
-        "description": "Create a stored procedure"
-    },
-    {
-        "command": "DROP PROCEDURE procedure_name;",
-        "description": "Delete a stored procedure"
-    },
-    {
-        "command": "CREATE FUNCTION function_name(param1 datatype, param2 datatype) RETURNS datatype BEGIN ... END;",
-        "description": "Create a stored function"
-    },
-    {
-        "command": "DROP FUNCTION function_name;",
-        "description": "Delete a stored function"
-    },
-    {
-        "command": "CREATE TRIGGER trigger_name BEFORE INSERT ON table_name FOR EACH ROW BEGIN ... END;",
-        "description": "Create a trigger"
-    },
-    {
-        "command": "DROP TRIGGER trigger_name;",
-        "description": "Delete a trigger"
-    },
-    {
-        "command": "START TRANSACTION;",
-        "description": "Start a transaction"
-    },
-    {
-        "command": "COMMIT;",
-        "description": "Commit a transaction"
-    },
-    {
-        "command": "ROLLBACK;",
-        "description": "Rollback a transaction"
-    },
-    {
-        "command": "SET autocommit = 0;",
-        "description": "Disable autocommit"
-    },
-    {
-        "command": "SET autocommit = 1;",
-        "description": "Enable autocommit"
-    },
-    {
-        "command": "LOCK TABLES table_name READ;",
-        "description": "Lock a table for reading"
-    },
-    {
-        "command": "LOCK TABLES table_name WRITE;",
-        "description": "Lock a table for writing"
-    },
-    {
-        "command": "UNLOCK TABLES;",
-        "description": "Unlock all tables"
-    },
-    {
-        "command": "CHECK TABLE table_name;",
-        "description": "Check a table for errors"
-    },
-    {
-        "command": "REPAIR TABLE table_name;",
-        "description": "Repair a table"
-    },
-    {
-        "command": "OPTIMIZE TABLE table_name;",
-        "description": "Optimize a table"
-    },
-    {
-        "command": "ANALYZE TABLE table_name;",
-        "description": "Analyze a table"
-    },
-    {
-        "command": "CHECKSUM TABLE table_name;",
-        "description": "Compute a checksum for a table"
-    },
-    {
-        "command": "FLUSH TABLES;",
-        "description": "Close all tables"
-    },
-    {
-        "command": "FLUSH TABLES table_name;",
-        "description": "Close a table"
-    },
-    {
-        "command": "FLUSH TABLES WITH READ LOCK;",
-        "description": "Lock all tables for reading"
-    },
-    {
-        "command": "FLUSH PRIVILEGES;",
-        "description": "Reload the privileges from the grant tables"
-    },
-    {
-        "command": "CHANGE MASTER TO master_option;",
-        "description": "Change the master server parameters"
-    },
-    {
-        "command": "STOP SLAVE;",
-        "description": "Stop the slave thread"
-    },
-    {
-        "command": "START SLAVE;",
-        "description": "Start the slave thread"
-    },
-    {
-        "command": "RESET SLAVE;",
-        "description": "Reset the slave connection info"
-    },
-    {
-        "command": "RESET MASTER;",
-        "description": "Reset the master server info"
-    },
-    {
-        "command": "PURGE BINARY LOGS;",
-        "description": "Purge binary logs"
-    },
-    {
-        "command": "PURGE MASTER LOGS;",
-        "description": "Purge master logs"
-    },
-    {
-        "command": "SET GLOBAL general_log = ON;",
-        "description": "Enable the general query log"
-    },
-    {
-        "command": "SET GLOBAL general_log = OFF;",
-        "description": "Disable the general query log"
-    },
-    {
-        "command": "SET GLOBAL slow_query_log = ON;",
-        "description": "Enable the slow query log"
-    },
-    {
-        "command": "SET GLOBAL slow_query_log = OFF;",
-        "description": "Disable the slow query log"
-    },
-    {
-        "command": "SET GLOBAL long_query_time = time;",
-        "description": "Set the long query time"
-    },
-    {
-        "command": "SHOW GLOBAL VARIABLES;",
-        "description": "Show global variables"
-    },
-    {
-        "command": "SHOW GLOBAL STATUS;",
-        "description": "Show global status"
-    },
-    {
-        "command": "SHOW ENGINE INNODB STATUS;",
-        "description": "Show InnoDB status"
-    },
-    {
-        "command": "SHOW PROCESSLIST;",
-        "description": "Show the process list"
-    },
-    {
-        "command": "KILL processlist_id;",
-        "description": "Kill a process"
-    },
-    {
-        "command": "SHOW OPEN TABLES;",
-        "description": "Show open tables"
-    },
-    {
-        "command": "SHOW PLUGINS;",
-        "description": "Show plugins"
-    },
-    {
-        "command": "INSTALL PLUGIN plugin_name SONAME 'plugin_file';",
-        "description": "Install a plugin"
-    },
-    {
-        "command": "UNINSTALL PLUGIN plugin_name;",
-        "description": "Uninstall a plugin"
-    },
-    {
-        "command": "SHOW CHARACTER SET;",
-        "description": "Show character sets"
-    },
-    {
-        "command": "SHOW COLLATION;",
-        "description": "Show collations"
-    },
-    {
-        "command": "SHOW CREATE DATABASE database_name;",
-        "description": "Show the CREATE DATABASE statement"
-    },
-    {
-        "command": "SHOW CREATE TABLE table_name;",
-        "description": "Show the CREATE TABLE statement"
-    },
-    {
-        "command": "SHOW CREATE VIEW view_name;",
-        "description": "Show the CREATE VIEW statement"
-    },
-    {
-        "command": "SHOW CREATE PROCEDURE procedure_name;",
-        "description": "Show the CREATE PROCEDURE statement"
-    },
-    {
-        "command": "SHOW CREATE FUNCTION function_name;",
-        "description": "Show the CREATE FUNCTION statement"
-    },
-    {
-        "command": "SHOW CREATE TRIGGER trigger_name;",
-        "description": "Show the CREATE TRIGGER statement"
-    },
-    {
-        "command": "SHOW CREATE EVENT event_name;",
-        "description": "Show the CREATE EVENT statement"
-    },
-    {
-        "command": "SHOW CREATE USER 'username'@'host';",
-        "description": "Show the CREATE USER statement"
-    },
-    {
-        "command": "SHOW INDEX FROM table_name;",
-        "description": "Show indexes from a table"
-    },
-    {
-        "command": "SHOW TABLE STATUS;",
-        "description": "Show table status"
-    },
-    {
-        "command": "SHOW FULL PROCESSLIST;",
-        "description": "Show the full process list"
-    },
-    {
-        "command": "SHOW PROFILES;",
-        "description": "Show profiles"
-    },
-    {
-        "command": "SHOW PROFILE;",
-        "description": "Show profile"
-    },
-    {
-        "command": "SHOW PROFILE FOR QUERY query_id;",
-        "description": "Show profile for a query"
-    },
-    {
-        "command": "SET PROFILING = ON;",
-        "description": "Enable profiling"
-    },
-    {
-        "command": "SET PROFILING = OFF;",
-        "description": "Disable profiling"
-    },
-    {
-        "command": "EXPLAIN SELECT column_name FROM table_name;",
-        "description": "Explain a SELECT statement"
-    },
-    {
-        "command": "hydra -l <username> -P <password_file> -f <ip> <service>",
-        "description": "Brute force a service with a list of usernames and passwords."
-    },
-    {
-        "command": "hydra -l <username> -P <password_file> -f -s <port> <ip> <service>",
-        "description": "Brute force a service on a specific port."
-    },
-    {
-        "command": "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -t <seconds>",
-        "description": "Set a timeout for the brute force attempt."
-    },
-    {
-        "command": "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -T <threads>",
-        "description": "Set the number of threads for the brute force attempt."
-    },
-    {
-        "command": "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -v",
-        "description": "Enable verbose output."
-    },
-    {
-        "command": "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -e <module>",
-        "description": "Specify a module to use for the brute force attempt."
-    },
-    {
-        "command": "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -M <subnet_file>",
-        "description": "Specify a subnet to use for the brute force attempt."
-    },
-    {
-        "command": "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -x <proxy:port>",
-        "description": "Specify a proxy to use for the brute force attempt."
-    },
-    {
-        "command": "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -X <proxy:port:username:password>",
-        "description": "Specify proxy credentials for the brute force attempt."
-    },
-    {
-        "command": "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -H <header>",
-        "description": "Specify a custom HTTP header for the brute force attempt."
-    },
-    {
-        "command": "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -m <path>",
-        "description": "Specify a path for digest authentication."
-    },
-    {
-        "command": "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> http-post-form <path>",
-        "description": "Specify a POST request for the brute force attempt."
-    },
-    {
-        "command": "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> http-get-form <path>",
-        "description": "Specify a GET request for the brute force attempt."
-    },
-    {
-        "command": "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> http-get <path>",
-        "description": "Specify a GET request for the brute force attempt."
-    },
-    {
-        "command": "ls",
-        "description": "List files and directories in the current directory"
-    },
-    {
-        "command": "pwd",
-        "description": "Print the current working directory"
-    },
-    {
-        "command": "cd <directory>",
-        "description": "Change the current working directory"
-    },
-    {
-        "command": "cp <source> <destination>",
-        "description": "Copy files or directories"
-    },
-    {
-        "command": "mv <source> <destination>",
-        "description": "Move or rename files or directories"
-    },
-    {
-        "command": "rm <file>",
-        "description": "Remove or delete files"
-    },
-    {
-        "command": "mkdir <directory>",
-        "description": "Create a new directory"
-    },
-    {
-        "command": "rmdir <directory>",
-        "description": "Remove an empty directory"
-    },
-    {
-        "command": "touch <file>",
-        "description": "Create an empty file or update the access timestamp of a file"
-    },
-    {
-        "command": "cat <file>",
-        "description": "Display the contents of a file"
-    },
-    {
-        "command": "nano <file>",
-        "description": "Open a text file in the Nano text editor"
-    },
-    {
-        "command": "vim <file>",
-        "description": "Open a text file in the Vim text editor"
-    },
-    {
-        "command": "grep '<pattern>' <file>",
-        "description": "Search for a pattern in a file"
-    },
-    {
-        "command": "ps",
-        "description": "Display information about running processes"
-    },
-    {
-        "command": "top",
-        "description": "Display a dynamic view of system processes"
-    },
-    {
-        "command": "kill <process_id>",
-        "description": "Terminate a running process"
-    },
-    {
-        "command": "chmod <permissions> <file>",
-        "description": "Change file permissions"
-    },
-    {
-        "command": "chown <user>:<group> <file>",
-        "description": "Change the owner and group of a file"
-    },
-    {
-        "command": "df",
-        "description": "Display disk space usage"
-    },
-    {
-        "command": "du",
-        "description": "Display file and directory space usage"
-    },
-    {
-        "command": "free",
-        "description": "Display amount of free and used memory in the system"
-    },
-    {
-        "command": "man <command>",
-        "description": "Display the manual page for a command"
-    },
-    {
-        "command": "info <command>",
-        "description": "Display additional information for a command"
-    },
-    {
-        "command": "date",
-        "description": "Display the current date and time"
-    },
-    {
-        "command": "cal",
-        "description": "Display a calendar"
-    },
-    {
-        "command": "cp -r <source> <destination>",
-        "description": "Recursively copy directories"
-    },
-    {
-        "command": "mv -r <source> <destination>",
-        "description": "Recursively move or rename directories"
-    },
-    {
-        "command": "rm -r <directory>",
-        "description": "Recursively remove directories and their contents"
-    },
-    {
-        "command": "locate <file_name>",
-        "description": "Find the location of a file"
-    },
-    {
-        "command": "find <directory> -name <file_name>",
-        "description": "Search for files in a directory by name"
-    },
-    {
-        "command": "wget <URL>",
-        "description": "Download files from the internet"
-    },
-    {
-        "command": "tar -czvf <archive_name.tar.gz> <directory>",
-        "description": "Create a compressed archive of a directory"
-    },
-    {
-        "command": "tar -xzvf <archive_name.tar.gz>",
-        "description": "Extract files from a compressed archive"
-    },
-    {
-        "command": "ssh <username>@<hostname>",
-        "description": "Connect to a remote server using SSH"
-    },
-    {
-        "command": "scp <file> <username>@<hostname>:<destination_path>",
-        "description": "Copy files securely between a local and a remote machine"
-    },
-    {
-        "command": "sudo <command>",
-        "description": "Execute a command with superuser privileges"
-    },
-    {
-        "command": "history",
-        "description": "Display command history"
-    },
-    {
-        "command": "alias <alias_name>='<command>'",
-        "description": "Create a command alias"
-    },
-    {
-        "command": "df -h",
-        "description": "Display disk space usage in a human-readable format"
-    },
-    {
-        "command": "cat /etc/passwd",
-        "description": "view_all_users"
-    },
-    {
-        "command": "sudo adduser <username>",
-        "description": "add_user"
-    },
-    {
-        "command": "sudo passwd <username>",
-        "description": "set_password"
-    },
-    {
-        "command": "sudo usermod -aG <group_name> <username>",
-        "description": "add_to_group"
-    },
-    {
-        "command": "hostname",
-        "description": "print your computer name"
-    },
-    {
-        "command": "ifconfig",
-        "description": "Display information about network interfaces"
-    },
-    {
-        "command": "ip addr show",
-        "description": "Show IP addresses and details of network interfaces"
-    },
-    {
-        "command": "iwconfig",
-        "description": "Display wireless network interface configuration"
-    },
-    {
-        "command": "nmcli",
-        "description": "Command-line client for NetworkManager, used for viewing and managing network connections"
-    },
-    {
-        "command": "netstat -i",
-        "description": "Display a table of network interfaces and their statistics"
-    },
-    {
-        "command": "route",
-        "description": "Show or manipulate the IP routing table"
-    },
-    {
-        "command": "ping <hostname or IP address>",
-        "description": "Send ICMP Echo Request to a network host"
-    },
-    {
-        "command": "traceroute <hostname or IP address>",
-        "description": "Trace the route that packets take to reach a network host"
-    },
-    {
-        "command": "nslookup <hostname or IP address>",
-        "description": "Query DNS for information about a domain or IP address"
-    },
-    {
-        "command": "dig <hostname or IP address>",
-        "description": "DNS lookup utility for querying DNS name servers"
-    },
-    {
-        "command": "route add default gw <gateway>",
-        "description": "Add a default gateway for routing"
-    },
-    {
-        "command": "ifconfig <interface> up",
-        "description": "Bring a network interface up"
-    },
-    {
-        "command": "ifconfig <interface> down",
-        "description": "Bring a network interface down"
-    },
-    {
-        "command": "ip link set <interface> up",
-        "description": "Enable a network interface"
-    },
-    {
-        "command": "ip link set <interface> down",
-        "description": "Disable a network interface"
-    },
-    {
-        "command": "ip link add <new_interface> type <type>",
-        "description": "Create a new network interface"
-    },
-    {
-        "command": "ip link delete <interface>",
-        "description": "Delete a network interface"
-    },
-    {
-        "command": "iptables",
-        "description": "Tool for configuring packet filter rules in the Linux kernel"
-    },
-    {
-        "command": "firewall-cmd",
-        "description": "Command-line interface for managing firewalld firewall daemon"
-    },
-    {
-        "command": "iptables -L",
-        "description": "List all rules in all chains"
-    },
-    {
-        "command": "iptables -L -n",
-        "description": "List rules with numeric output for better readability"
-    },
-    {
-        "command": "iptables -A <chain> -p <protocol> --dport <port> -j ACCEPT",
-        "description": "Append a rule to allow incoming traffic on a specific port"
-    },
-    {
-        "command": "iptables -A <chain> -p <protocol> --sport <port> -j ACCEPT",
-        "description": "Append a rule to allow outgoing traffic on a specific port"
-    },
-    {
-        "command": "iptables -A <chain> -s <source_ip> -j DROP",
-        "description": "Append a rule to block incoming traffic from a specific source IP address"
-    },
-    {
-        "command": "iptables -A <chain> -d <destination_ip> -j DROP",
-        "description": "Append a rule to block outgoing traffic to a specific destination IP address"
-    },
-    {
-        "command": "iptables -D <chain> <rule_number>",
-        "description": "Delete a specific rule from a chain"
-    },
-    {
-        "command": "iptables -F",
-        "description": "Flush all rules, deleting all rules from all chains"
-    },
-    {
-        "command": "iptables -P <chain> <policy>",
-        "description": "Set the default policy for a chain (ACCEPT, DROP, or REJECT)"
-    },
-    {
-        "command": "iptables-save > <file_path>",
-        "description": "Save current iptables rules to a file"
-    },
-    {
-        "command": "iptables-restore < <file_path>",
-        "description": "Restore iptables rules from a previously saved file"
-    },
-    {
-        "command": "iptables -I <chain> <rule_number> -j LOG --log-prefix '<log_prefix>'",
-        "description": "Insert a logging rule into a specific position in a chain"
-    },
-    {
-        "command": "iptables -I <chain> <rule_number> -j DROP",
-        "description": "Insert a rule to block traffic into a specific position in a chain"
-    },
-    {
-        "command": "iptables -A INPUT -i <interface> -j ACCEPT",
-        "description": "Allow incoming traffic on a specific network interface"
-    },
-    {
-        "command": "iptables -A OUTPUT -o <interface> -j ACCEPT",
-        "description": "Allow outgoing traffic on a specific network interface"
-    },
-    {
-        "command": "iptables -A FORWARD -i <in_interface> -o <out_interface> -j ACCEPT",
-        "description": "Allow forwarding traffic from one interface to another"
-    },
-    {
-        "command": "nmap -sS <target>",
-        "description": "Perform a TCP SYN scan"
-    },
-    {
-        "command": "nmap -sT <target>",
-        "description": "Perform a TCP connect scan"
-    },
-    {
-        "command": "nmap -sU <target>",
-        "description": "Perform a UDP scan"
-    },
-    {
-        "command": "nmap -sN <target>",
-        "description": "Perform a TCP null scan"
-    },
-    {
-        "command": "nmap -sF <target>",
-        "description": "Perform a TCP FIN scan"
-    },
-    {
-        "command": "nmap -sX <target>",
-        "description": "Perform a TCP Xmas scan"
-    },
-    {
-        "command": "nmap -sA <target>",
-        "description": "Perform a TCP ACK scan"
-    },
-    {
-        "command": "nmap -sW <target>",
-        "description": "Perform a TCP Window scan"
-    },
-    {
-        "command": "nmap -sM <target>",
-        "description": "Perform a TCP Maimon scan"
-    },
-    {
-        "command": "nmap -sO <target>",
-        "description": "Perform a IP protocol scan"
-    },
-    {
-        "command": "nmap -sV <target>",
-        "description": "Probe open ports to determine service/version info"
-    },
-    {
-        "command": "nmap -O <target>",
-        "description": "Determine the OS of the target"
-    },
-    {
-        "command": "nmap -A <target>",
-        "description": "Enable OS detection, version detection, script scanning, and traceroute"
-    },
-    {
-        "command": "nmap -p <port_range> <target>",
-        "description": "Only scan specified ports"
-    },
-    {
-        "command": "nmap -p- <target>",
-        "description": "Scan all ports"
-    },
-    {
-        "command": "nmap --top-ports <number> <target>",
-        "description": "Scan <number> most common ports"
-    },
-    {
-        "command": "nmap -sU -sV -sC --script=all <target>",
-        "description": "UDP scan with version detection and default scripts"
-    },
-    {
-        "command": "nmap --script=<script_name> <target>",
-        "description": "Run individual NSE scripts"
-    },
-    {
-        "command": "nmap --script-args=<script_args> <target>",
-        "description": "Provide arguments to NSE scripts"
-    },
-    {
-        "command": "nmap --script-args-file=<file_name> <target>",
-        "description": "Provide NSE script args from a file"
-    },
-    {
-        "command": "nmap --script-help=<script_name>",
-        "description": "Display help for individual scripts"
-    },
-    {
-        "command": "nmap --script-trace <target>",
-        "description": "Show all data sent and received"
-    },
-    {
-        "command": "nmap --script-updatedb <target>",
-        "description": "Update the script database"
-    },
-    {
-        "command": "nmap -iL <input_file>",
-        "description": "Scan targets from a list in a file"
-    },
-    {
-        "command": "nmap -iR <number>",
-        "description": "Choose random targets"
-    },
-    {
-        "command": "nmap --exclude <target1,target2,...>,<targetN>",
-        "description": "Exclude targets from a scan"
-    },
-    {
-        "command": "nmap --excludefile <exclude_file>",
-        "description": "Exclude targets using a list in a file"
-    },
-    {
-        "command": "nmap -Pn <target>",
-        "description": "Treat all hosts as online -- skip host discovery"
-    },
-    {
-        "command": "nmap -v <target>",
-        "description": "Verbose output"
-    },
-    {
-        "command": "nmap -d <target>",
-        "description": "Debugging output"
-    },
-    {
-        "command": "nmap --reason <target>",
-        "description": "Display the reason a port is in a particular state"
-    },
-    {
-        "command": "nmap --open <target>",
-        "description": "Only show open (or possibly open) ports"
-    },
-    {
-        "command": "nmap --packet-trace <target>",
-        "description": "Show all packets sent and received"
-    },
-    {
-        "command": "nmap -sV --version-intensity <level> <target>",
-        "description": "Set from 0 (light) to 9 (try all probes)"
-    },
-    {
-        "command": "nmap -sV --version-light <target>",
-        "description": "Try the most likely probes (intensity 2)"
-    },
-    {
-        "command": "nmap -sV --version-all <target>",
-        "description": "Try all possible probes (intensity 9)"
-    },
-    {
-        "command": "nmap --script-args=unsafe=1 <target>",
-        "description": "Some scripts require this option"
-    },
-    {
-        "command": "nmap -6 <target>",
-        "description": "Enable IPv6 scanning"
-    },
-    {
-        "command": "nmap -sn <target>",
-        "description": "Disable port scan"
-    },
-    {
-        "command": "nmap -e <interface> <target>",
-        "description": "Specify a network interface"
-    },
-    {
-        "command": "nmap -S <spoof_ip> <target>",
-        "description": "Spoof source address"
-    },
-    {
-        "command": "nmap --proxies <proxy_list> <target>",
-        "description": "Relay connections through HTTP/SOCKS4 proxies"
-    },
-    {
-        "command": "nmap --data-length <size> <target>",
-        "description": "Append random data to sent packets"
-    },
-    {
-        "command": "nmap --source-port <port> <target>",
-        "description": "Send packets from a specified source port"
-    },
-    {
-        "command": "nmap --min-parallelism <number> <target>",
-        "description": "Number of probes in parallel"
-    },
-    {
-        "command": "nmap --max-parallelism <number> <target>",
-        "description": "Maximum number of probes in parallel"
-    },
-    {
-        "command": "nmap --min-hostgroup <number> <target>",
-        "description": "Minimum host group size"
-    },
-    {
-        "command": "nmap --max-hostgroup <number> <target>",
-        "description": "Maximum host group size"
-    },
-    {
-        "command": "nmap --min-rtt-timeout <time> <target>",
-        "description": "Specified in milliseconds"
-    },
-    {
-        "command": "nmap --max-rtt-timeout <time> <target>",
-        "description": "Specified in milliseconds"
-    },
-    {
-        "command": "nmap --initial-rtt-timeout <time> <target>",
-        "description": "Specified in milliseconds"
-    },
-    {
-        "command": "nmap --max-scan-delay <time> <target>",
-        "description": "Adjust delay between packets"
-    },
-    {
-        "command": "nmap --scan-delay <time> <target>",
-        "description": "Adjust delay between packets"
-    },
-    {
-        "command": "nmap --max-retries <number> <target>",
-        "description": "Set the max number of port scan probe retransmissions"
-    },
-    {
-        "command": "nmap --host-timeout <time> <target>",
-        "description": "Give up on target after this long"
-    },
-    {
-        "command": "nmap --script-timeout <time> <target>",
-        "description": "The script itself may set a lower timeout"
-    },
-    {
-        "command": "nmap --version-intensity <level> <target>",
-        "description": "Set from 0 (light) to 9 (try all probes)"
-    },
-    {
-        "command": "nmap --version-light <target>",
-        "description": "Try the most likely probes (intensity 2)"
-    },
-    {
-        "command": "nmap --version-all <target>",
-        "description": "Try all possible probes (intensity 9)"
-    },
-    {
-        "command": "nmap --min-rate <number> <target>",
-        "description": "Send packets no slower than <number> per second"
-    },
-    {
-        "command": "nmap --max-rate <number> <target>",
-        "description": "Send packets no faster than <number> per second"
-    },
-    {
-        "command": "nmap --defeat-rst-ratelimit <target>",
-        "description": "Defeat reset rate limits"
-    },
-    {
-        "command": "nmap --mtu <val> <target>",
-        "description": "Set your specified offset size"
-    },
-    {
-        "command": "nmap --ip-options <options> <target>",
-        "description": "Use specified IP options"
-    },
-    {
-        "command": "nmap --ttl <value> <target>",
-        "description": "Set IP time-to-live field"
-    },
-    {
-        "command": "nmap --spoof-mac <macaddress/prefix/vendor name> <target>",
-        "description": "Spoof your MAC address"
-    },
-    {
-        "command": "nmap --badsum <target>",
-        "description": "Send packets with a bogus TCP/UDP/SCTP checksum"
-    },
-    {
-        "command": "nmap -D <decoy1,decoy2,...,decoyN> <target>",
-        "description": "Cloak a scan with decoys"
-    },
-    {
-        "command": "nmap --proxies <file> <target>",
-        "description": "Relay connections through HTTP/SOCKS4 proxies"
-    },
-    {
-        "command": "nmap --data <hex_string> <target>",
-        "description": "Append a custom payload to sent packets"
-    },
-    {
-        "command": "nmap --randomize-hosts <target>",
-        "description": "Scan the addresses in random order"
-    },
-    {
-        "command": "nmap -sL <target>",
-        "description": "List Scan - simply list targets to scan"
-    },
-    {
-        "command": "nmap -PS/PA/PU/PY[portlist] <target>",
-        "description": "TCP SYN/ACK, UDP or SCTP discovery to given ports"
-    },
-    {
-        "command": "nmap -PE/PP/PM <target>",
-        "description": "ICMP echo, timestamp, and netmask request discovery probes"
-    },
-    {
-        "command": "nmap -PO[protocol list] <target>",
-        "description": "IP Protocol Ping"
-    },
-    {
-        "command": "nmap -n/-R <target>",
-        "description": "Never do DNS resolution/Always resolve [default: sometimes]"
-    },
-    {
-        "command": "nmap --dns-servers <servers> <target>",
-        "description": "Specify custom DNS servers"
-    },
-    {
-        "command": "nmap --system-dns <target>",
-        "description": "Use OS's DNS resolver"
-    },
-    {
-        "command": "nmap --traceroute <target>",
-        "description": "Trace hop path to each host"
-    },
-    {
-        "command": "nmap -g/--source-port <portnum> <target>",
-        "description": "Use given port number"
-    },
-    {
-        "command": "nmap --script=ftp-brute <target>",
-        "description": "Perform brute force password auditing against FTP servers"
-    },
-    {
-        "command": "nmap --script=http-brute <target>",
-        "description": "Perform brute force password auditing against HTTP servers"
-    },
-    {
-        "command": "nmap --script=imap-brute <target>",
-        "description": "Perform brute force password auditing against IMAP servers"
-    },
-    {
-        "command": "nmap --script=pop3-brute <target>",
-        "description": "Perform brute force password auditing against POP3 servers"
-    },
-    {
-        "command": "nmap --script=smtp-brute <target>",
-        "description": "Perform brute force password auditing against SMTP servers"
-    },
-    {
-        "command": "nmap --script=snmp-brute <target>",
-        "description": "Perform brute force community string auditing against SNMP servers"
-    },
-    {
-        "command": "nmap --script=ssh-brute <target>",
-        "description": "Perform brute force password auditing against SSH servers"
-    },
-    {
-        "command": "nmap --script=telnet-brute <target>",
-        "description": "Perform brute force password auditing against Telnet servers"
-    },
-    {
-        "command": "nmap --script=vmauthd-brute <target>",
-        "description": "Perform brute force password auditing against VMware Authentication Daemon"
-    },
-    {
-        "command": "nmap --script=vnc-brute <target>",
-        "description": "Perform brute force password auditing against VNC servers"
-    },
-    {
-        "command": "nmap --script=xmpp-brute <target>",
-        "description": "Perform brute force password auditing against XMPP servers"
-    },
-    {
-        "command": "nmap --script=smb-brute <target>",
-        "description": "Perform brute force password auditing against SMB servers"
-    },
-    {
-        "command": "nmap --script=rdp-brute <target>",
-        "description": "Perform brute force password auditing against RDP servers"
-    },
-    {
-        "command": "nmap --script=ms-sql-brute <target>",
-        "description": "Perform brute force password auditing against Microsoft SQL servers"
-    },
-    {
-        "command": "nmap --script=oracle-brute <target>",
-        "description": "Perform brute force password auditing against Oracle servers"
-    },
-    {
-        "command": "nmap --script=mysql-brute <target>",
-        "description": "Perform brute force password auditing against MySQL servers"
-    },
-    {
-        "command": "nmap --script=pgsql-brute <target>",
-        "description": "Perform brute force password auditing against PostgreSQL servers"
-    },
-    {
-        "command": "nmap --script=mssql-brute <target>",
-        "description": "Perform brute force password auditing against MSSQL servers"
-    },
-    {
-        "command": "nmap --script=cisco-enable-brute <target>",
-        "description": "Perform brute force password auditing against Cisco devices with enabled services"
-    },
-    {
-        "command": "nmap --script=sip-brute <target>",
-        "description": "Perform brute force password auditing against SIP servers"
-    },
-    {
-        "command": "nmap --script=auth <target>",
-        "description": "Attempt to bypass authentication for running services"
-    },
-    {
-        "command": "nmap --script=broadcast <target>",
-        "description": "Determine if target is broadcasting"
-    },
-    {
-        "command": "nmap --script=brute <target>",
-        "description": "Perform brute force password auditing against services"
-    },
-    {
-        "command": "nmap --script=default <target>",
-        "description": "Default set of scripts to reduce target spew"
-    },
-    {
-        "command": "nmap --script=discovery <target>",
-        "description": "Attempt to query running services for further information"
-    },
-    {
-        "command": "nmap --script=dos <target>",
-        "description": "Detect various dos scenarios"
-    },
-    {
-        "command": "nmap --script=exploit <target>",
-        "description": "Attempt to exploit a service"
-    },
-    {
-        "command": "nmap --script=external <target>",
-        "description": "Checks using a list of external scripts"
-    },
-    {
-        "command": "nmap --script=fuzzer <target>",
-        "description": "Launch fuzzing attacks"
-    },
-    {
-        "command": "nmap --script=intrusive <target>",
-        "description": "Intrusive scripts (Vuln, safe)"
-    },
-    {
-        "command": "nmap --script=malware <target>",
-        "description": "Scans for backdoor ports"
-    },
-    {
-        "command": "nmap --script=safe <target>",
-        "description": "Safe scripts that won't crash the target"
-    },
-    {
-        "command": "nmap --script=version <target>",
-        "description": "Attempt to retrieve the version number of a service"
-    },
-    {
-        "command": "nmap --script=vuln <target>",
-        "description": "Checks for vulnerabilities"
-    },
-    {
-        "command": "nmap --script=http-enum <target>",
-        "description": "Enumerate HTTP services"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2010-2861 <target>",
-        "description": "Checks for the CVE-2010-2861 vulnerability in Apache Struts"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2012-1823 <target>",
-        "description": "Checks for the CVE-2012-1823 vulnerability in Oracle WebLogic Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2013-0156 <target>",
-        "description": "Checks for the CVE-2013-0156 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2013-1862 <target>",
-        "description": "Checks for the CVE-2013-1862 vulnerability in Apache Tomcat"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2013-2038 <target>",
-        "description": "Checks for the CVE-2013-2038 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2013-2065 <target>",
-        "description": "Checks for the CVE-2013-2065 vulnerability in Apache Tomcat"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2013-2251 <target>",
-        "description": "Checks for the CVE-2013-2251 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2013-5704 <target>",
-        "description": "Checks for the CVE-2013-5704 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2014-0038 <target>",
-        "description": "Checks for the CVE-2014-0038 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2014-0050 <target>",
-        "description": "Checks for the CVE-2014-0050 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2014-3704 <target>",
-        "description": "Checks for the CVE-2014-3704 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2014-7911 <target>",
-        "description": "Checks for the CVE-2014-7911 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2015-1427 <target>",
-        "description": "Checks for the CVE-2015-1427 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2015-1635 <target>",
-        "description": "Checks for the CVE-2015-1635 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2015-4000 <target>",
-        "description": "Checks for the CVE-2015-4000 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2015-5612 <target>",
-        "description": "Checks for the CVE-2015-5612 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2016-0735 <target>",
-        "description": "Checks for the CVE-2016-0735 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2016-10033 <target>",
-        "description": "Checks for the CVE-2016-10033 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2016-4470 <target>",
-        "description": "Checks for the CVE-2016-4470 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2016-4975 <target>",
-        "description": "Checks for the CVE-2016-4975 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2016-5387 <target>",
-        "description": "Checks for the CVE-2016-5387 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2016-5388 <target>",
-        "description": "Checks for the CVE-2016-5388 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2016-6663 <target>",
-        "description": "Checks for the CVE-2016-6663 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2017-3169 <target>",
-        "description": "Checks for the CVE-2017-3169 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2017-7679 <target>",
-        "description": "Checks for the CVE-2017-7679 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2017-8917 <target>",
-        "description": "Checks for the CVE-2017-8917 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2017-9798 <target>",
-        "description": "Checks for the CVE-2017-9798 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2018-1312 <target>",
-        "description": "Checks for the CVE-2018-1312 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2018-18778 <target>",
-        "description": "Checks for the CVE-2018-18778 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=http-vuln-cve2019-0217 <target>",
-        "description": "Checks for the CVE-2019-0217 vulnerability in Apache HTTP Server"
-    },
-    {
-        "command": "nmap --script=banner <target>",
-        "description": "Retrieve the banner of the service"
-    },
-    {
-        "command": "nmap --script=http-headers <target>",
-        "description": "Retrieve HTTP headers for a target"
-    },
-    {
-        "command": "nmap --script=http-methods <target>",
-        "description": "Retrieve HTTP methods supported by a target"
-    },
-    {
-        "command": "nmap --script=http-ntlm-info <target>",
-        "description": "Retrieve NTLM authentication information"
-    },
-    {
-        "command": "nmap --script=http-php-version <target>",
-        "description": "Detect PHP version of the target"
-    },
-    {
-        "command": "nmap --script=http-robots.txt <target>",
-        "description": "Retrieve robots.txt file from a target"
-    },
-    {
-        "command": "nmap --script=http-security-headers <target>",
-        "description": "Retrieve security headers from a target"
-    },
-    {
-        "command": "nmap --script=http-server-header <target>",
-        "description": "Retrieve server header from a target"
-    },
-    {
-        "command": "nmap --script=http-title <target>",
-        "description": "Retrieve the title of the webpage"
-    },
-    {
-        "command": "nmap --script=http-userdir-enum <target>",
-        "description": "Enumerate user directories on a target"
-    },
-    {
-        "command": "nmap --script=imap-capabilities <target>",
-        "description": "Retrieve IMAP capabilities"
-    },
-    {
-        "command": "nmap --script=ms-sql-info <target>",
-        "description": "Retrieve information from a Microsoft SQL server"
-    },
-    {
-        "command": "nmap --script=mysql-databases <target>",
-        "description": "Retrieve databases from a MySQL server"
-    },
-    {
-        "command": "nmap --script=mysql-empty-password <target>",
-        "description": "Test if a MySQL server allows login by an empty password"
-    },
-    {
-        "command": "nmap --script=mysql-info <target>",
-        "description": "Retrieve information from a MySQL server"
-    },
-    {
-        "command": "nmap --script=mysql-variables <target>",
-        "description": "Retrieve variables from a MySQL server"
-    },
-    {
-        "command": "nmap --script=oracle-tns-version <target>",
-        "description": "Retrieve TNS version from an Oracle server"
-    },
-    {
-        "command": "nmap --script=pop3-capabilities <target>",
-        "description": "Retrieve POP3 capabilities"
-    },
-    {
-        "command": "nmap --script=smtp-commands <target>",
-        "description": "Retrieve SMTP commands from a target"
-    },
-    {
-        "command": "nmap --script=snmp-interfaces <target>",
-        "description": "Retrieve interfaces from a SNMP server"
-    },
-    {
-        "command": "nmap --script=ssl-cert <target>",
-        "description": "Retrieve SSL certificate information"
-    },
-    {
-        "command": "nmap --script=ssl-enum-ciphers <target>",
-        "description": "Enumerate SSL ciphers"
-    },
-    {
-        "command": "nmap --script=telnet-ntlm-info <target>",
-        "description": "Retrieve NTLM authentication information from a Telnet server"
-    },
-    {
-        "command": "nmap --script=vulners.nse <target>",
-        "description": "Retrieve vulnerabilities from the CVE database"
-    },
-    {
-        "command": "nmap --script=vulscan <target>",
-        "description": "Retrieve vulnerabilities from the Nessus vulnerability database"
-    },
-    {
-        "command": "nmap --script=smb-enum-shares <target>",
-        "description": "Enumerate SMB shares"
-    },
-    {
-        "command": "nmap --script=smb-enum-users <target>",
-        "description": "Enumerate SMB users"
-    },
-    {
-        "command": "nmap --script=smb-os-discovery <target>",
-        "description": "Discover the operating system of a SMB server"
-    },
-    {
-        "command": "nmap --script=smb-security-mode <target>",
-        "description": "Retrieve the security mode of a SMB server"
-    },
-    {
-        "command": "nmap --script=smb-server-stats <target>",
-        "description": "Retrieve server statistics from a SMB server"
-    },
-    {
-        "command": "nmap --script=smb-system-info <target>",
-        "description": "Retrieve system information from a SMB server"
-    },
-    {
-        "command": "nmap --script=snmp-netstat <target>",
-        "description": "Retrieve network statistics from a SNMP server"
-    },
-    {
-        "command": "nmap --script=snmp-processes <target>",
-        "description": "Retrieve processes from a SNMP server"
-    },
-    {
-        "command": "nmap --script=snmp-sysdescr <target>",
-        "description": "Retrieve the system description from a SNMP server"
-    },
-    {
-        "command": "nmap --script=snmp-win32-services <target>",
-        "description": "Retrieve Windows services from a SNMP server"
-    },
-    {
-        "command": "nmap --script=snmp-win32-shares <target>",
-        "description": "Retrieve Windows shares from a SNMP server"
-    },
-    {
-        "command": "nmap --script=snmp-win32-software <target>",
-        "description": "Retrieve Windows software from a SNMP server"
-    },
-    {
-        "command": "nmap --script=snmp-win32-users <target>",
-        "description": "Retrieve Windows users from a SNMP server"
-    },
-    {
-        "command": "ssh user@host",
-        "description": "Connect to a remote server"
-    },
-    {
-        "command": "ssh -p port user@host",
-        "description": "Connect to a remote server using a specific port"
-    },
-    {
-        "command": "ssh -i keyfile user@host",
-        "description": "Connect to a remote server using a specific key file"
-    },
-    {
-        "command": "ssh -X user@host",
-        "description": "Enable X11 forwarding"
-    },
-    {
-        "command": "ssh -Y user@host",
-        "description": "Enable trusted X11 forwarding"
-    },
-    {
-        "command": "ssh -A user@host",
-        "description": "Enable agent forwarding"
-    },
-    {
-        "command": "ssh -L local_port:host:remote_port user@host",
-        "description": "Create a local port forward"
-    },
-    {
-        "command": "ssh -R remote_port:host:local_port user@host",
-        "description": "Create a remote port forward"
-    },
-    {
-        "command": "ssh -D port user@host",
-        "description": "Create a dynamic application-level port forward"
-    },
-    {
-        "command": "ssh -N user@host",
-        "description": "Do not execute a remote command"
-    },
-    {
-        "command": "ssh -f user@host sleep time",
-        "description": "Put SSH in the background"
-    },
-    {
-        "command": "ssh-keygen -t type",
-        "description": "Generate a new SSH key pair"
-    },
-    {
-        "command": "ssh-copy-id -i keyfile user@host",
-        "description": "Install your public key in a remote server's authorized_keys"
-    },
-    {
-        "command": "ssh-add keyfile",
-        "description": "Add a private key to the authentication agent"
-    },
-    {
-        "command": "ssh-agent bash",
-        "description": "Start the SSH agent in the background"
-    },
-    {
-        "command": "ssh-agent $SHELL",
-        "description": "Start the SSH agent for the current shell"
-    },
-    {
-        "command": "ssh-agent -k",
-        "description": "Kill the SSH agent"
-    },
-    {
-        "command": "ssh-keyscan -t type host",
-        "description": "Get the public key of a remote server"
-    },
-    {
-        "command": "scp source user@host:destination",
-        "description": "Secure copy (remote file copy program)"
-    },
-    {
-        "command": "sftp user@host",
-        "description": "Secure file transfer program"
-    },
-    {
-        "command": "sshfs user@host:remote_dir local_dir",
-        "description": "Mount a remote directory"
-    },
-    {
-        "command": "ssh user@host command",
-        "description": "Execute a command on a remote server"
-    },
-    {
-        "command": "ssh user@host 'bash -s' < script.sh",
-        "description": "Execute a local script on a remote server"
-    },
-    {
-        "command": "ssh -t user@host top",
-        "description": "Execute a command with a pseudo-terminal"
-    },
-    {
-        "command": "ssh user@host 'sudo command'",
-        "description": "Execute a command as another user"
-    },
-    {
-        "command": "ssh user@host tail -f /var/log/syslog",
-        "description": "Monitor a remote log file"
-    },
-    {
-        "command": "ssh user@host nc -l port",
-        "description": "Set up a reverse shell"
-    },
-    {
-        "command": "ssh user@host nc host port",
-        "description": "Set up a bind shell"
-    },
-    {
-        "command": "ssh user@host 'ssh-keygen -R host'",
-        "description": "Remove a host key from the known_hosts file"
-    },
-    {
-        "command": "ssh user@host 'ssh-keygen -A'",
-        "description": "Regenerate the host keys"
-    },
-    {
-        "command": "ssh user@host 'journalctl -f'",
-        "description": "Monitor the systemd journal"
-    },
-    {
-        "command": "ssh user@host 'systemctl status service'",
-        "description": "Check the status of a service"
-    },
-    {
-        "command": "ssh user@host 'systemctl start service'",
-        "description": "Start a service"
-    },
-    {
-        "command": "ssh user@host 'systemctl stop service'",
-        "description": "Stop a service"
-    },
-    {
-        "command": "ssh user@host 'systemctl restart service'",
-        "description": "Restart a service"
-    },
-    {
-        "command": "ssh user@host 'systemctl reload service'",
-        "description": "Reload a service"
-    },
-    {
-        "command": "ssh user@host 'systemctl enable service'",
-        "description": "Enable a service to start on boot"
-    },
-    {
-        "command": "ssh user@host 'systemctl disable service'",
-        "description": "Disable a service to start on boot"
-    },
-    {
-        "command": "ssh user@host 'systemctl is-active service'",
-        "description": "Check if a service is active"
-    },
-    {
-        "command": "ssh user@host 'systemctl is-enabled service'",
-        "description": "Check if a service is enabled"
-    },
-    {
-        "command": "ssh user@host 'systemctl list-units --type service'",
-        "description": "List all services"
-    },
-    {
-        "command": "ssh user@host 'systemctl list-unit-files --state enabled'",
-        "description": "List enabled services"
-    },
-    {
-        "command": "ssh user@host 'systemctl list-unit-files --state disabled'",
-        "description": "List disabled services"
-    },
-    {
-        "command": "ssh user@host 'systemctl list-dependencies service'",
-        "description": "List dependencies of a service"
-    },
-    {
-        "command": "ssh user@host 'systemctl cat service'",
-        "description": "Show the service file"
-    },
-    {
-        "command": "ssh user@host 'systemctl edit service'",
-        "description": "Edit the service file"
-    },
-    {
-        "command": "ssh user@host 'systemctl mask service'",
-        "description": "Mask a service"
-    },
-    {
-        "command": "ssh user@host 'systemctl unmask service'",
-        "description": "Unmask a service"
-    },
-    {
-        "command": "ssh user@host 'systemctl revert service'",
-        "description": "Revert a service to its vendor version"
-    },
-    {
-        "command": "ssh user@host 'systemctl preset service'",
-        "description": "Enable/disable a service based on preset files"
-    },
-    {
-        "command": "ssh user@host 'systemctl is-system-running'",
-        "description": "Check if the system is running"
-    },
-    {
-        "command": "ssh user@host 'systemctl list-jobs'",
-        "description": "List jobs"
-    },
-    {
-        "command": "ssh user@host 'systemctl list-timers'",
-        "description": "List timers"
-    },
-    {
-        "command": "ssh user@host 'systemctl list-sockets'",
-        "description": "List sockets"
-    },
-    {
-        "command": "ssh user@host 'systemctl list-machines'",
-        "description": "List machines"
-    },
-    {
-        "command": "ssh user@host 'systemctl list-unit-files'",
-        "description": "List unit files"
-    },
-    {
-        "command": "ssh user@host 'systemctl list-units'",
-        "description": "List units"
-    },
-    {
-        "command": "ssh user@host 'systemctl show service'",
-        "description": "Show properties of a service"
-    },
-    {
-        "command": "ssh user@host 'systemctl set-property service property=value'",
-        "description": "Set a property of a service"
-    },
-    {
-        "command": "ssh user@host 'systemctl unset-property service property'",
-        "description": "Unset a property of a service"
-    },
-    {
-        "command": "ssh user@host 'systemctl reload-or-restart service'",
-        "description": "Reload or restart a service"
-    },
-    {
-        "command": "ssh user@host 'systemctl rescue service'",
-        "description": "Enter rescue mode for a service"
-    },
-    {
-        "command": "ssh user@host 'systemctl mount-image image'",
-        "description": "Mount an image"
-    },
-    {
-        "command": "ssh user@host 'systemctl unmount-image image'",
-        "description": "Unmount an image"
-    },
-    {
-        "command": "ssh user@host 'systemctl enable-linger user'",
-        "description": "Enable linger for a user"
-    },
-    {
-        "command": "ssh user@host 'systemctl disable-linger user'",
-        "description": "Disable linger for a user"
-    },
-    {
-        "command": "ssh user@host 'systemctl is-enabled-linger user'",
-        "description": "Check if linger is enabled for a user"
-    },
-    {
-        "command": "ssh user@host 'systemctl daemon-reload'",
-        "description": "Reload systemd manager configuration"
-    },
-    {
-        "command": "ssh user@host 'systemctl daemon-reexec'",
-        "description": "Reexecute systemd manager"
-    },
-    {
-        "command": "ssh user@host 'systemctl default'",
-        "description": "Enter system default mode"
-    },
-    {
-        "command": "ssh user@host 'systemctl emergency'",
-        "description": "Enter system emergency mode"
-    },
-    {
-        "command": "ssh user@host 'systemctl halt'",
-        "description": "Shut down and halt the system"
-    },
-    {
-        "command": "ssh user@host 'systemctl poweroff'",
-        "description": "Shut down and power-off the system"
-    },
-    {
-        "command": "ssh user@host 'systemctl reboot'",
-        "description": "Shut down and reboot the system"
-    },
-    {
-        "command": "ssh user@host 'systemctl kexec'",
-        "description": "Shut down and load a new kernel"
-    },
-    {
-        "command": "ssh user@host 'systemctl suspend'",
-        "description": "Suspend the system"
-    },
-    {
-        "command": "ssh user@host 'systemctl hibernate'",
-        "description": "Hibernate the system"
-    },
-    {
-        "command": "ssh user@host 'systemctl hybrid-sleep'",
-        "description": "Hibernate and suspend the system"
-    },
-    {
-        "command": "ssh user@host 'systemctl rescue'",
-        "description": "Enter system rescue mode"
-    },
-    {
-        "command": "ssh user@host 'systemctl exit [EXIT_CODE]'",
-        "description": "Shut down the system with an exit code"
-    },
-    {
-        "command": "ssh user@host 'systemctl is-system-running --wait'",
-        "description": "Wait until the system is running"
-    },
-    {
-        "command": "ssh user@host 'systemctl is-system-running --help'",
-        "description": "Show help for the is-system-running command"
-    },
-    {
-        "command": "ssh user@host 'systemctl is-system-running --version'",
-        "description": "Show version for the is-system-running command"
-    },
-    {
-        "command": "ssh user@host 'systemctl is-system-running --quiet'",
-        "description": "Be quiet for the is-system-running command"
-    },
-    {
-        "command": "git init",
-        "description": "Initialize a new Git repository in the current directory"
-    },
-    {
-        "command": "git clone <repository>",
-        "description": "Clone a remote repository to your local machine"
-    },
-    {
-        "command": "git add <file>",
-        "description": "Stage changes for the next commit"
-    },
-    {
-        "command": "git add .",
-        "description": "Stage all changes for the next commit"
-    },
-    {
-        "command": "git commit -m '<message>'",
-        "description": "Commit staged changes with a descriptive message"
-    },
-    {
-        "command": "git status",
-        "description": "View the status of your working directory"
-    },
-    {
-        "command": "git log",
-        "description": "Display the commit history"
-    },
-    {
-        "command": "git branch",
-        "description": "List all branches in the repository"
-    },
-    {
-        "command": "git branch <branch_name>",
-        "description": "Create a new branch"
-    },
-    {
-        "command": "git checkout <branch_name>",
-        "description": "Switch to a different branch"
-    },
-    {
-        "command": "git merge <branch_name>",
-        "description": "Merge changes from another branch into the current branch"
-    },
-    {
-        "command": "git pull",
-        "description": "Fetch changes from the remote repository and merge them into the current branch"
-    },
-    {
-        "command": "git push",
-        "description": "Push committed changes to the remote repository"
-    },
-    {
-        "command": "git remote -v",
-        "description": "View the remote repositories associated with your local repository"
-    },
-    {
-        "command": "git fetch",
-        "description": "Fetch changes from the remote repository without merging"
-    },
-    {
-        "command": "git diff",
-        "description": "Show the differences between the working directory and the last commit"
-    },
-    {
-        "command": "git rm <file>",
-        "description": "Remove a file from both the working directory and the Git repository"
-    },
-    {
-        "command": "git mv <old_file> <new_file>",
-        "description": "Rename or move a file and stage the changes"
-    },
-    {
-        "command": "git reset <file>",
-        "description": "Unstage changes for the specified file"
-    },
-    {
-        "command": "git reset --hard",
-        "description": "Discard all changes in the working directory and staging area"
-    },
-    {
-        "command": "git log --oneline",
-        "description": "Display the commit history in one line per commit"
-    },
-    {
-        "command": "git remote add <remote_name> <repository_url>",
-        "description": "Add a new remote repository"
-    },
-    {
-        "command": "git branch -d <branch_name>",
-        "description": "Delete a local branch"
-    },
-    {
-        "command": "git push <remote_name> --delete <branch_name>",
-        "description": "Delete a remote branch"
-    },
-    {
-        "command": "git tag <tag_name>",
-        "description": "Create a lightweight tag for the current commit"
-    },
-    {
-        "command": "git tag -a <tag_name> -m '<tag_message>'",
-        "description": "Create an annotated tag for the current commit"
-    },
-    {
-        "command": "git push --tags",
-        "description": "Push tags to the remote repository"
-    },
-    {
-        "command": "git config --global user.name 'Your Name'",
-        "description": "Set your global Git username"
-    },
-    {
-        "command": "git config --global user.email 'your.email@example.com'",
-        "description": "Set your global Git email"
-    },
-    {
-        "command": "git stash",
-        "description": "Stash changes in the working directory for later use"
-    },
-    {
-        "command": "git stash apply",
-        "description": "Apply the most recently stashed changes"
-    },
-    {
-        "command": "git stash list",
-        "description": "List all stashes"
-    },
-    {
-        "command": "git clean -fd",
-        "description": "Remove untracked files and directories from the working directory"
-    },
-    {
-        "command": "git remote show <remote_name>",
-        "description": "Show information about a remote repository"
-    },
-    {
-        "command": "git submodule update --init --recursive",
-        "description": "Initialize and update submodules"
-    },
-    {
-        "command": "git log --graph --oneline --all",
-        "description": "Display a compact and graph-like commit history"
-    },
-    {
-        "command": "git grep '<pattern>'",
-        "description": "Search for a pattern in the working directory"
-    },
-    {
-        "command": "git bisect start",
-        "description": "Start a binary search for the commit that introduced a bug"
-    },
-    {
-        "command": "git bisect good <commit_hash>",
-        "description": "Mark a commit as good during the binary search"
-    },
-    {
-        "command": "git bisect bad <commit_hash>",
-        "description": "Mark a commit as bad during the binary search"
-    },
-    {
-        "command": "git bisect reset",
-        "description": "Finish the binary search and return to the original branch"
-    },
-    {
-        "command": "git archive --format=zip --output=<output_filename> <branch_name>",
-        "description": "Create a zip archive of a specific branch"
-    },
-    {
-        "command": "git remote rename <old_remote_name> <new_remote_name>",
-        "description": "Rename a remote repository"
-    },
-    {
-        "command": "git reflog",
-        "description": "View a log of reference changes (useful for recovering lost commits)"
-    },
-    {
-        "command": "git cherry-pick <commit_hash>",
-        "description": "Apply the changes introduced by a specific commit to the current branch"
-    },
-    {
-        "command": "git remote prune <remote_name>",
-        "description": "Remove remote branches that no longer exist on the remote repository"
-    },
-    {
-        "command": "git log --pretty=format:'%h - %an, %ar : %s'",
-        "description": "Customize the format of the commit history display"
-    },
-    {
-        "command": "git grep --cached '<pattern>'",
-        "description": "Search for a pattern in the staging area"
-    },
-    {
-        "command": "git log --since='1 week ago'",
-        "description": "Show commits since a specific date or time"
-    },
-    {
-        "command": "git blame <file>",
-        "description": "Show who last modified each line in a file"
-    },
-    {
-        "command": "git rev-parse --abbrev-ref HEAD",
-        "description": "Get the current branch name"
-    },
-    {
-        "command": "git log --no-merges",
-        "description": "Display the commit history excluding merge commits"
-    },
-    {
-        "command": "git config --global alias.<alias_name> '<command>'",
-        "description": "Create a global Git alias"
-    },
-    {
-        "command": "git remote update",
-        "description": "Fetch changes from all remote repositories"
-    },
-    {
-        "command": "git log --grep='<pattern>'",
-        "description": "Search for commits with a specific message pattern"
-    },
-    {
-        "command": "git log -p -S '<string>'",
-        "description": "Search for commits that introduced or removed a specific string"
-    },
-    {
-        "command": "git blame -L <start>,<end> <file>",
-        "description": "Show who last modified the specified lines in a file"
-    },
-    {
-        "command": "git log --reverse",
-        "description": "Display the commit history in reverse order"
-    },
-    {
-        "command": "git diff <branch1>..<branch2>",
-        "description": "Show the differences between two branches"
-    },
-    {
-        "command": "git log --cherry-pick --right-only --no-merges <branch1>...<branch2>",
-        "description": "Show commits unique to the right branch in a three-dot range"
-    },
-    {
-        "command": "git log --graph --all --decorate",
-        "description": "Display a commit history graph with all branches and tags"
-    },
-    {
-        "command": "git log --oneline --graph --all --decorate",
-        "description": "Display a compact commit history graph with all branches and tags"
-    },
-    {
-        "command": "git log --author='<author_name>'",
-        "description": "Show commits by a specific author"
-    },
-    {
-        "command": "git show <commit_hash>",
-        "description": "Show the changes introduced by a specific commit"
-    },
-    {
-        "command": "git diff --name-only <branch1>..<branch2>",
-        "description": "Show the names of files that differ between two branches"
-    },
-    {
-        "command": "git pull --rebase",
-        "description": "Fetch changes from the remote repository and reapply local commits on top"
-    },
-    {
-        "command": "git fetch --prune",
-        "description": "Fetch changes from the remote repository and remove references to deleted branches"
-    },
-    {
-        "command": "git log --since='2 weeks ago' --until='1 week ago'",
-        "description": "Show commits within a specific date range"
-    },
-    {
-        "command": "git log --pretty=format:'%h %s' --graph",
-        "description": "Display a commit history graph with abbreviated commit hashes and commit messages"
-    },
-    {
-        "command": "git log --pretty=format:'%h %s' --graph --date=short",
-        "description": "Display a commit history graph with abbreviated commit hashes, commit messages, and short date format"
-    },
-    {
-        "command": "git diff HEAD^ HEAD",
-        "description": "Show the differences between the last two commits"
-    },
-    {
-        "command": "git log --oneline --graph --all --branches",
-        "description": "Display a commit history graph with all branches highlighted"
-    },
-    {
-        "command": "git rev-list --all --count",
-        "description": "Count the total number of commits in the repository"
-    },
-    {
-        "command": "test",
-        "description": "test1234"
-    }
+  {"description":"Python Server","command":"python3 -m http.server 9000"},
+  {"description":"Nc Server","command":"nc -lvnp 4444"},
+  {"description":"Check open ports","command":"sudo netstat -tuln"},
+  {"description":"To install a .deb file","command":"sudo dpkg -i file.deb"},
+  {"description":"check used space via cli","command":"df -h"},
+  {"description":"Streamlit","command":"streamlit run app.py --server.port 8899"},
+  {"description":"Release the current lease","command":"sudo dhclient -r"},
+  {"description":"Renew the lease and obtain a new IP","command":"sudo dhclient"},
+  {"description":"Run script no full path","command":"sudo cp ghupdater.py /usr/local/bin"},
+  {"description":"Fix broken apt install","command":"sudo apt-get upgrade --fix-missing"},
+  {"description":"Probe open ports to determine service/version info","command":"nmap -sV <target>"},
+  {"description":"Determine the OS of the target","command":"nmap -O <target>"},
+  {"description":"Enable OS detection, version detection, script scanning, and traceroute","command":"nmap -A <target>"},
+  {"description":"Only scan specified ports","command":"nmap -p <port_range> <target>"},
+  {"description":"Scan all ports","command":"nmap -p- <target>"},
+  {"description":"Scan <number> most common ports","command":"nmap --top-ports <number> <target>"},
+  {"description":"UDP scan with version detection and default scripts","command":"nmap -sU -sV -sC --script=all <target>"},
+  {"description":"Run individual NSE scripts","command":"nmap --script=<script_name> <target>"},
+  {"description":"Provide arguments to NSE scripts","command":"nmap --script-args=<script_args> <target>"},
+  {"description":"Provide NSE script args from a file","command":"nmap --script-args-file=<file_name> <target>"},
+  {"description":"Display help for individual scripts","command":"nmap --script-help=<script_name>"},
+  {"description":"Show all data sent and received","command":"nmap --script-trace <target>"},
+  {"description":"Update the script database","command":"nmap --script-updatedb <target>"},
+  {"description":"Scan targets from a list in a file","command":"nmap -iL <input_file>"},
+  {"description":"Choose random targets","command":"nmap -iR <number>"},
+  {"description":"Exclude targets from a scan","command":"nmap --exclude <target1,target2,...>,<targetN>"},
+  {"description":"Exclude targets using a list in a file","command":"nmap --excludefile <exclude_file>"},
+  {"description":"Treat all hosts as online -- skip host discovery","command":"nmap -Pn <target>"},
+  {"description":"Verbose output","command":"nmap -v <target>"},
+  {"description":"Debugging output","command":"nmap -d <target>"},
+  {"description":"Display the reason a port is in a particular state","command":"nmap --reason <target>"},
+  {"description":"Only show open (or possibly open) ports","command":"nmap --open <target>"},
+  {"description":"Show all packets sent and received","command":"nmap --packet-trace <target>"},
+  {"description":"Set from 0 (light) to 9 (try all probes)","command":"nmap -sV --version-intensity <level> <target>"},
+  {"description":"Try the most likely probes (intensity 2)","command":"nmap -sV --version-light <target>"},
+  {"description":"Try all possible probes (intensity 9)","command":"nmap -sV --version-all <target>"},
+  {"description":"Some scripts require this option","command":"nmap --script-args=unsafe=1 <target>"},
+  {"description":"Enable IPv6 scanning","command":"nmap -6 <target>"},
+  {"description":"Disable port scan","command":"nmap -sn <target>"},
+  {"description":"Specify a network interface","command":"nmap -e <interface> <target>"},
+  {"description":"Spoof source address","command":"nmap -S <spoof_ip> <target>"},
+  {"description":"Relay connections through HTTP/SOCKS4 proxies","command":"nmap --proxies <proxy_list> <target>"},
+  {"description":"Append random data to sent packets","command":"nmap --data-length <size> <target>"},
+  {"description":"Send packets from a specified source port","command":"nmap --source-port <port> <target>"},
+  {"description":"Number of probes in parallel","command":"nmap --min-parallelism <number> <target>"},
+  {"description":"Maximum number of probes in parallel","command":"nmap --max-parallelism <number> <target>"},
+  {"description":"Minimum host group size","command":"nmap --min-hostgroup <number> <target>"},
+  {"description":"Maximum host group size","command":"nmap --max-hostgroup <number> <target>"},
+  {"description":"Specified in milliseconds","command":"nmap --min-rtt-timeout <time> <target>"},
+  {"description":"Specified in milliseconds","command":"nmap --max-rtt-timeout <time> <target>"},
+  {"description":"Specified in milliseconds","command":"nmap --initial-rtt-timeout <time> <target>"},
+  {"description":"Adjust delay between packets","command":"nmap --max-scan-delay <time> <target>"},
+  {"description":"Adjust delay between packets","command":"nmap --scan-delay <time> <target>"},
+  {"description":"Set the max number of port scan probe retransmissions","command":"nmap --max-retries <number> <target>"},
+  {"description":"Give up on target after this long","command":"nmap --host-timeout <time> <target>"},
+  {"description":"The script itself may set a lower timeout","command":"nmap --script-timeout <time> <target>"},
+  {"description":"Set from 0 (light) to 9 (try all probes)","command":"nmap --version-intensity <level> <target>"},
+  {"description":"Try the most likely probes (intensity 2)","command":"nmap --version-light <target>"},
+  {"description":"Try all possible probes (intensity 9)","command":"nmap --version-all <target>"},
+  {"description":"Send packets no slower than <number> per second","command":"nmap --min-rate <number> <target>"},
+  {"description":"Send packets no faster than <number> per second","command":"nmap --max-rate <number> <target>"},
+  {"description":"Defeat reset rate limits","command":"nmap --defeat-rst-ratelimit <target>"},
+  {"description":"Set your specified offset size","command":"nmap --mtu <val> <target>"},
+  {"description":"Use specified IP options","command":"nmap --ip-options <options> <target>"},
+  {"description":"Set IP time-to-live field","command":"nmap --ttl <value> <target>"},
+  {"description":"Spoof your MAC address","command":"nmap --spoof-mac <macaddress/prefix/vendor name> <target>"},
+  {"description":"Send packets with a bogus TCP/UDP/SCTP checksum","command":"nmap --badsum <target>"},
+  {"description":"Cloak a scan with decoys","command":"nmap -D <decoy1,decoy2,...,decoyN> <target>"},
+  {"description":"Relay connections through HTTP/SOCKS4 proxies","command":"nmap --proxies <file> <target>"},
+  {"description":"Append a custom payload to sent packets","command":"nmap --data <hex_string> <target>"},
+  {"description":"Display IP configuration for all network interfaces","command":"ipconfig"},
+  {"description":"List files and directories in the current directory","command":"dir"},
+  {"description":"List all running processes","command":"tasklist"},
+  {"description":"Display detailed information about the computer's configuration","command":"systeminfo"},
+  {"description":"Run System File Checker to scan and repair system files","command":"sfc /scannow"},
+  {"description":"Display all active network connections","command":"netstat -an"},
+  {"description":"Send ICMP echo requests to test network connectivity","command":"ping <host>"},
+  {"description":"Force immediate update of Group Policy settings","command":"gpupdate /force"},
+  {"description":"Check and repair disk errors","command":"chkdsk /f"},
+  {"description":"Shutdown the computer immediately","command":"shutdown /s /t 0"},
+  {"description":"Open the Windows Registry Editor","command":"regedit"},
+  {"description":"List installed software and their versions","command":"wmic product get name,version"},
+  {"description":"System Configuration Utility: Configure startup options","command":"msconfig"},
+  {"description":"Flush and reset the DNS resolver cache","command":"ipconfig /flushdns"},
+  {"description":"Get detailed OS information","command":"systeminfo | findstr /B /C:\"OS Name\" /C:\"OS Version\""},
+  {"description":"Forcefully terminate a running process","command":"taskkill /F /IM <process_name>"},
+  {"description":"Generate a battery health report","command":"powercfg /batteryreport"},
+  {"description":"List scheduled tasks","command":"schtasks /query"},
+  {"description":"Display user accounts information","command":"net user"},
+  {"description":"List all wireless network profiles","command":"netsh wlan show profiles"},
+  {"description":"List all available wireless networks","command":"netsh wlan show networks"},
+  {"description":"Connect to a wireless network","command":"netsh wlan connect name=<network_name>"},
+  {"description":"Display IPv4 network configuration","command":"netsh interface ipv4 show config"},
+  {"description":"Display IPv6 network configuration","command":"netsh interface ipv6 show config"},
+  {"description":"Set static IPv4 address","command":"netsh interface ipv4 set address name=<interface_name> source=static <ip_address> <subnet_mask> <gateway>"},
+  {"description":"Set static IPv6 address","command":"netsh interface ipv6 set address name=<interface_name> source=static <ip_address> <prefix_length>"},
+  {"description":"Clear DNS servers","command":"netsh interface ipv4 set dnsservers name=<interface_name> source=static address=none"},
+  {"description":"Clear IPv6 DNS servers","command":"netsh interface ipv6 set dnsservers name=<interface_name> source=static address=none"},
+  {"description":"Add DNS server","command":"netsh interface ipv4 add dnsservers name=<interface_name> address=<dns_server_address> index=<index>"},
+  {"description":"Add IPv6 DNS server","command":"netsh interface ipv6 add dnsservers name=<interface_name> address=<dns_server_address> index=<index>"},
+  {"description":"Add port proxy","command":"netsh interface portproxy add v4tov4 listenport=<listen_port> listenaddress=<listen_address> connectport=<connect_port> connectaddress=<connect_address>"},
+  {"description":"Delete port proxy","command":"netsh interface portproxy delete v4tov4 listenport=<listen_port> listenaddress=<listen_address>"},
+  {"description":"Display IPv4 routing table","command":"netsh interface ipv4 show route"},
+  {"description":"Display IPv6 routing table","command":"netsh interface ipv6 show route"},
+  {"description":"Add IPv4 route","command":"netsh interface ipv4 add route prefix=<prefix> mask=<mask> nexthop=<nexthop> interface=<interface_index>"},
+  {"description":"Add IPv6 route","command":"netsh interface ipv6 add route prefix=<prefix>/<prefix_length> nexthop=<nexthop> interface=<interface_index>"},
+  {"description":"Delete IPv4 route","command":"netsh interface ipv4 delete route prefix=<prefix> mask=<mask>"},
+  {"description":"Delete IPv6 route","command":"netsh interface ipv6 delete route prefix=<prefix>/<prefix_length>"},
+  {"description":"Add firewall inbound rule for TCP","command":"netsh advfirewall firewall add rule name=<rule_name> dir=in action=allow protocol=TCP localport=<port_number>"},
+  {"description":"Add firewall outbound rule for TCP","command":"netsh advfirewall firewall add rule name=<rule_name> dir=out action=allow protocol=TCP localport=<port_number>"},
+  {"description":"Add firewall inbound rule for UDP","command":"netsh advfirewall firewall add rule name=<rule_name> dir=in action=allow protocol=UDP localport=<port_number>"},
+  {"description":"Add firewall outbound rule for UDP","command":"netsh advfirewall firewall add rule name=<rule_name> dir=out action=allow protocol=UDP localport=<port_number>"},
+  {"description":"Delete firewall rule","command":"netsh advfirewall firewall delete rule name=<rule_name>"},
+  {"description":"Enable firewall rule","command":"netsh advfirewall firewall set rule name=<rule_name> new enable=yes"},
+  {"description":"Disable firewall rule","command":"netsh advfirewall firewall set rule name=<rule_name> new enable=no"},
+  {"description":"Display all firewall profiles","command":"netsh advfirewall show allprofiles"},
+  {"description":"Display current firewall profile","command":"netsh advfirewall show currentprofile"},
+  {"description":"Enable firewall","command":"netsh advfirewall set currentprofile state on"},
+  {"description":"Disable firewall","command":"netsh advfirewall set currentprofile state off"},
+  {"description":"Enable all firewall profiles","command":"netsh advfirewall set allprofiles state on"},
+  {"description":"Disable all firewall profiles","command":"netsh advfirewall set allprofiles state off"},
+  {"description":"Display Teredo network configuration","command":"netsh interface teredo show state"},
+  {"description":"Disable ISATAP","command":"netsh interface isatap set state disabled"},
+  {"description":"Enable ISATAP","command":"netsh interface isatap set state enabled"},
+  {"description":"Display ISATAP network configuration","command":"netsh interface isatap show state"},
+  {"description":"Disable 6to4","command":"netsh interface 6to4 set state disabled"},
+  {"description":"Enable 6to4","command":"netsh interface 6to4 set state enabled"},
+  {"description":"Display 6to4 network configuration","command":"netsh interface 6to4 show state"},
+  {"description":"Display all port proxy settings","command":"netsh interface portproxy show all"},
+  {"description":"Display IPv4 to IPv4 port proxy settings","command":"netsh interface portproxy show v4tov4"},
+  {"description":"Display IPv4 to IPv6 port proxy settings","command":"netsh interface portproxy show v4tov6"},
+  {"description":"Display IPv6 to IPv4 port proxy settings","command":"netsh interface portproxy show v6tov4"},
+  {"description":"Display IPv6 to IPv6 port proxy settings","command":"netsh interface portproxy show v6tov6"},
+  {"description":"Display IPv4 packet filter settings","command":"netsh interface ipv4 show filters"},
+  {"description":"Display IPv6 packet filter settings","command":"netsh interface ipv6 show filters"},
+  {"description":"Trace the route to a host","command":"tracert <host>"},
+  {"description":"Query the DNS to find the IP address of a host","command":"nslookup <host>"},
+  {"description":"Display the username of the current user","command":"whoami"},
+  {"description":"Display the hostname of the computer","command":"hostname"},
+  {"description":"Display the Windows version and other information","command":"ver"},
+  {"description":"Display NetBIOS over TCP/IP information for a remote computer","command":"nbtstat -A <ip_address>"},
+  {"description":"Display information about network connections","command":"net use"},
+  {"description":"Connect to a network drive","command":"net use \\\\<computer_name>\\<share_name> /user:<username> <password>"},
+  {"description":"Display information about network resources","command":"net view"},
+  {"description":"Display all active TCP connections and the processes using them","command":"netstat -b"},
+  {"description":"Display network statistics","command":"netstat -e"},
+  {"description":"Display the IP routing table","command":"netstat -r"},
+  {"description":"Display network statistics by protocol","command":"netstat -s"},
+  {"description":"Display active TCP connections and the numerical addresses they are connected to","command":"netstat -n"},
+  {"description":"Display the ARP table","command":"netsh interface ipv4 show neighbors"},
+  {"description":"Display the neighbor cache for IPv6","command":"netsh interface ipv6 show neighbors"},
+  {"description":"Display IPv4 interface information","command":"netsh interface ipv4 show interface"},
+  {"description":"Display IPv6 interface information","command":"netsh interface ipv6 show interface"},
+  {"description":"Display active TCP connections","command":"netsh interface ipv4 show tcpconnections"},
+  {"description":"Display active TCP connections for IPv6","command":"netsh interface ipv6 show tcpconnections"},
+  {"description":"Display active UDP connections","command":"netsh interface ipv4 show udpconnections"},
+  {"description":"Display active UDP connections for IPv6","command":"netsh interface ipv6 show udpconnections"},
+  {"description":"Display IPv4 statistics","command":"netsh interface ipv4 show ipstats"},
+  {"description":"Display IPv6 statistics","command":"netsh interface ipv6 show ipstats"},
+  {"description":"Display IPv4 interface statistics","command":"netsh interface ipv4 show ipinterface"},
+  {"description":"Display IPv6 interface statistics","command":"netsh interface ipv6 show ipinterface"},
+  {"description":"Display global IPv4 information","command":"netsh interface ipv4 show global"},
+  {"description":"Display global IPv6 information","command":"netsh interface ipv6 show global"},
+  {"description":"Display IPv4 subinterface information","command":"netsh interface ipv4 show subinterfaces"},
+  {"description":"Display IPv6 subinterface information","command":"netsh interface ipv6 show subinterfaces"},
+  {"description":"Display detailed IPv4 interface information","command":"netsh interface ipv4 show interface <interface_name>"},
+  {"description":"Display detailed IPv6 interface information","command":"netsh interface ipv6 show interface <interface_name>"},
+  {"description":"Display IPv4 address information for a specific interface","command":"netsh interface ipv4 show address <interface_name>"},
+  {"description":"Display IPv6 address information for a specific interface","command":"netsh interface ipv6 show address <interface_name>"},
+  {"description":"Display detailed IPv4 configuration information for a specific interface","command":"netsh interface ipv4 show config <interface_name>"},
+  {"description":"Display detailed IPv6 configuration information for a specific interface","command":"netsh interface ipv6 show config <interface_name>"},
+  {"description":"Display IPv4 routing table for a specific interface","command":"netsh interface ipv4 show route <interface_name>"},
+  {"description":"Display IPv6 routing table for a specific interface","command":"netsh interface ipv6 show route <interface_name>"},
+  {"description":"Display the ARP table for a specific interface","command":"netsh interface ipv4 show neighbors <interface_name>"},
+  {"description":"Display the neighbor cache for IPv6 for a specific interface","command":"netsh interface ipv6 show neighbors <interface_name>"},
+  {"description":"Display active TCP connections for a specific interface","command":"netsh interface ipv4 show tcpconnections <interface_name>"},
+  {"description":"Display active TCP connections for IPv6 for a specific interface","command":"netsh interface ipv6 show tcpconnections <interface_name>"},
+  {"description":"Display active UDP connections for a specific interface","command":"netsh interface ipv4 show udpconnections <interface_name>"},
+  {"description":"Display active UDP connections for IPv6 for a specific interface","command":"netsh interface ipv6 show udpconnections <interface_name>"},
+  {"description":"Display IPv4 statistics for a specific interface","command":"netsh interface ipv4 show ipstats <interface_name>"},
+  {"description":"Display IPv6 statistics for a specific interface","command":"netsh interface ipv6 show ipstats <interface_name>"},
+  {"description":"Display IPv4 interface statistics for a specific interface","command":"netsh interface ipv4 show ipinterface <interface_name>"},
+  {"description":"Display IPv6 interface statistics for a specific interface","command":"netsh interface ipv6 show ipinterface <interface_name>"},
+  {"description":"Display global IPv4 information for a specific interface","command":"netsh interface ipv4 show global <interface_name>"},
+  {"description":"Display global IPv6 information for a specific interface","command":"netsh interface ipv6 show global <interface_name>"},
+  {"description":"Display IPv4 subinterface information for a specific interface","command":"netsh interface ipv4 show subinterfaces <interface_name>"},
+  {"description":"Set a static IPv4 address for a specific interface","command":"netsh interface ipv4 set address <interface_name> static <ip_address> <subnet_mask> <gateway>"},
+  {"description":"Set a static IPv6 address for a specific interface","command":"netsh interface ipv6 set address <interface_name> static <ip_address> <prefix_length>"},
+  {"description":"Set a static DNS server for a specific interface","command":"netsh interface ipv4 set dnsservers <interface_name> static <dns_server_address>"},
+  {"description":"Add a DNS server for a specific interface","command":"netsh interface ipv4 add dnsservers <interface_name> <dns_server_address> index=<index>"},
+  {"description":"Set a DHCP IPv4 address for a specific interface","command":"netsh interface ipv4 set address <interface_name> dhcp"},
+  {"description":"Set a DHCP IPv6 address for a specific interface with a specific DHCP server","command":"netsh interface ipv6 set address <interface_name> dhcp <dhcp_server_address>"},
+  {"description":"Set a DHCP IPv6 address for a specific interface with two DHCP servers","command":"netsh interface ipv6 set address <interface_name> dhcp <dhcp_server_address> <dhcp_server_address2>"},
+  {"description":"Set a DHCP IPv6 address for a specific interface with three DHCP servers","command":"netsh interface ipv6 set address <interface_name> dhcp <dhcp_server_address> <dhcp_server_address2> <dhcp_server_address3>"},
+  {"description":"Set a DHCP IPv6 address for a specific interface with four DHCP servers","command":"netsh interface ipv6 set address <interface_name> dhcp <dhcp_server_address> <dhcp_server_address2> <dhcp_server_address3> <dhcp_server_address4>"},
+  {"description":"Display detailed IP configuration for all network interfaces","command":"ipconfig /all"},
+  {"description":"List all installed device drivers","command":"driverquery"},
+  {"description":"Display total physical memory","command":"systeminfo | findstr /C:\"Total Physical Memory\""},
+  {"description":"Display the currently logged-in username","command":"echo %username%"},
+  {"description":"Display the computer name","command":"echo %computername%"},
+  {"description":"List all running processes and their associated services","command":"tasklist /svc"},
+  {"description":"Display Resultant Set of Policy for the current user","command":"gpresult /r"},
+  {"description":"List all drives on the system","command":"fsutil fsinfo drives"},
+  {"description":"Display free space on drive C:","command":"fsutil volume diskfree C:"},
+  {"description":"Retrieve the computer's serial number","command":"wmic bios get serialnumber"},
+  {"description":"Display the last system boot time","command":"wmic os get lastbootuptime"},
+  {"description":"Display detailed information about installed drivers","command":"driverquery /v"},
+  {"description":"Display domain and logon server information","command":"systeminfo | findstr /C:\"Domain\" /C:\"Logon Server\""},
+  {"description":"List running processes","command":"tasklist /fi \"status eq running\""},
+  {"description":"List processes with memory usage greater than 100,000 KB","command":"tasklist /fi \"memusage gt 100000\""},
+  {"description":"Display whether the system is 32-bit or 64-bit","command":"systeminfo | findstr /C:\"System Type\""},
+  {"description":"List installed Windows updates","command":"wmic qfe list"},
+  {"description":"Display the boot device","command":"systeminfo | findstr /C:\"Boot Device\""},
+  {"description":"Display NTFS file system information for drive C:","command":"fsutil fsinfo ntfsinfo C:"},
+  {"description":"Display the Windows version using ver command","command":"ver | findstr /B /C:\"Version\""},
+  {"description":"Display the Windows installation date","command":"systeminfo | findstr /C:\"Install Date\""},
+  {"description":"List running processes in brief format","command":"wmic process list brief"},
+  {"description":"Display information about logical disks","command":"wmic logicaldisk get deviceid, volumename, freespace, size"},
+  {"description":"List all databases","command":"SHOW DATABASES;"},
+  {"description":"Select a database to use","command":"USE database_name;"},
+  {"description":"List all tables in the current database","command":"SHOW TABLES;"},
+  {"description":"Show the structure of a table","command":"DESCRIBE table_name;"},
+  {"description":"Select data from a table","command":"SELECT column_name FROM table_name;"},
+  {"description":"Select all columns from a table","command":"SELECT * FROM table_name;"},
+  {"description":"Insert data into a table","command":"INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);"},
+  {"description":"Update data in a table","command":"UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;"},
+  {"description":"Delete data from a table","command":"DELETE FROM table_name WHERE condition;"},
+  {"description":"Create a new database","command":"CREATE DATABASE database_name;"},
+  {"description":"Delete a database","command":"DROP DATABASE database_name;"},
+  {"description":"Create a new table","command":"CREATE TABLE table_name (column1 datatype, column2 datatype, ...);"},
+  {"description":"Delete a table","command":"DROP TABLE table_name;"},
+  {"description":"Add a column to a table","command":"ALTER TABLE table_name ADD column_name datatype;"},
+  {"description":"Delete a column from a table","command":"ALTER TABLE table_name DROP COLUMN column_name;"},
+  {"description":"Modify the data type of a column","command":"ALTER TABLE table_name MODIFY COLUMN column_name datatype;"},
+  {"description":"Create an index on a table","command":"CREATE INDEX index_name ON table_name (column_name);"},
+  {"description":"Delete an index from a table","command":"DROP INDEX index_name ON table_name;"},
+  {"description":"Create a new user","command":"CREATE USER 'username'@'host' IDENTIFIED BY 'password';"},
+  {"description":"Grant permissions to a user","command":"GRANT permission ON database_name.table_name TO 'username'@'host';"},
+  {"description":"Revoke permissions from a user","command":"REVOKE permission ON database_name.table_name FROM 'username'@'host';"},
+  {"description":"Show the permissions granted to a user","command":"SHOW GRANTS FOR 'username'@'host';"},
+  {"description":"Rename a table","command":"RENAME TABLE old_table_name TO new_table_name;"},
+  {"description":"Delete all data from a table","command":"TRUNCATE TABLE table_name;"},
+  {"description":"Backup a database","command":"BACKUP DATABASE database_name TO DISK = 'filepath';"},
+  {"description":"Restore a database from a backup","command":"RESTORE DATABASE database_name FROM DISK = 'filepath';"},
+  {"description":"Create a new view","command":"CREATE VIEW view_name AS SELECT column1, column2 FROM table_name WHERE condition;"},
+  {"description":"Delete a view","command":"DROP VIEW view_name;"},
+  {"description":"Create a stored procedure","command":"CREATE PROCEDURE procedure_name() BEGIN ... END;"},
+  {"description":"Delete a stored procedure","command":"DROP PROCEDURE procedure_name;"},
+  {"description":"Create a stored function","command":"CREATE FUNCTION function_name(param1 datatype, param2 datatype) RETURNS datatype BEGIN ... END;"},
+  {"description":"Delete a stored function","command":"DROP FUNCTION function_name;"},
+  {"description":"Create a trigger","command":"CREATE TRIGGER trigger_name BEFORE INSERT ON table_name FOR EACH ROW BEGIN ... END;"},
+  {"description":"Delete a trigger","command":"DROP TRIGGER trigger_name;"},
+  {"description":"Start a transaction","command":"START TRANSACTION;"},
+  {"description":"Commit a transaction","command":"COMMIT;"},
+  {"description":"Rollback a transaction","command":"ROLLBACK;"},
+  {"description":"Disable autocommit","command":"SET autocommit = 0;"},
+  {"description":"Enable autocommit","command":"SET autocommit = 1;"},
+  {"description":"Lock a table for reading","command":"LOCK TABLES table_name READ;"},
+  {"description":"Lock a table for writing","command":"LOCK TABLES table_name WRITE;"},
+  {"description":"Unlock all tables","command":"UNLOCK TABLES;"},
+  {"description":"Check a table for errors","command":"CHECK TABLE table_name;"},
+  {"description":"Repair a table","command":"REPAIR TABLE table_name;"},
+  {"description":"Optimize a table","command":"OPTIMIZE TABLE table_name;"},
+  {"description":"Analyze a table","command":"ANALYZE TABLE table_name;"},
+  {"description":"Compute a checksum for a table","command":"CHECKSUM TABLE table_name;"},
+  {"description":"Close all tables","command":"FLUSH TABLES;"},
+  {"description":"Close a table","command":"FLUSH TABLES table_name;"},
+  {"description":"Lock all tables for reading","command":"FLUSH TABLES WITH READ LOCK;"},
+  {"description":"Reload the privileges from the grant tables","command":"FLUSH PRIVILEGES;"},
+  {"description":"Change the master server parameters","command":"CHANGE MASTER TO master_option;"},
+  {"description":"Stop the slave thread","command":"STOP SLAVE;"},
+  {"description":"Start the slave thread","command":"START SLAVE;"},
+  {"description":"Reset the slave connection info","command":"RESET SLAVE;"},
+  {"description":"Reset the master server info","command":"RESET MASTER;"},
+  {"description":"Purge binary logs","command":"PURGE BINARY LOGS;"},
+  {"description":"Purge master logs","command":"PURGE MASTER LOGS;"},
+  {"description":"Enable the general query log","command":"SET GLOBAL general_log = ON;"},
+  {"description":"Disable the general query log","command":"SET GLOBAL general_log = OFF;"},
+  {"description":"Enable the slow query log","command":"SET GLOBAL slow_query_log = ON;"},
+  {"description":"Disable the slow query log","command":"SET GLOBAL slow_query_log = OFF;"},
+  {"description":"Set the long query time","command":"SET GLOBAL long_query_time = time;"},
+  {"description":"Show global variables","command":"SHOW GLOBAL VARIABLES;"},
+  {"description":"Show global status","command":"SHOW GLOBAL STATUS;"},
+  {"description":"Show InnoDB status","command":"SHOW ENGINE INNODB STATUS;"},
+  {"description":"Show the process list","command":"SHOW PROCESSLIST;"},
+  {"description":"Kill a process","command":"KILL processlist_id;"},
+  {"description":"Show open tables","command":"SHOW OPEN TABLES;"},
+  {"description":"Show plugins","command":"SHOW PLUGINS;"},
+  {"description":"Install a plugin","command":"INSTALL PLUGIN plugin_name SONAME 'plugin_file';"},
+  {"description":"Uninstall a plugin","command":"UNINSTALL PLUGIN plugin_name;"},
+  {"description":"Show character sets","command":"SHOW CHARACTER SET;"},
+  {"description":"Show collations","command":"SHOW COLLATION;"},
+  {"description":"Show the CREATE DATABASE statement","command":"SHOW CREATE DATABASE database_name;"},
+  {"description":"Show the CREATE TABLE statement","command":"SHOW CREATE TABLE table_name;"},
+  {"description":"Show the CREATE VIEW statement","command":"SHOW CREATE VIEW view_name;"},
+  {"description":"Show the CREATE PROCEDURE statement","command":"SHOW CREATE PROCEDURE procedure_name;"},
+  {"description":"Show the CREATE FUNCTION statement","command":"SHOW CREATE FUNCTION function_name;"},
+  {"description":"Show the CREATE TRIGGER statement","command":"SHOW CREATE TRIGGER trigger_name;"},
+  {"description":"Show the CREATE EVENT statement","command":"SHOW CREATE EVENT event_name;"},
+  {"description":"Show the CREATE USER statement","command":"SHOW CREATE USER 'username'@'host';"},
+  {"description":"Show indexes from a table","command":"SHOW INDEX FROM table_name;"},
+  {"description":"Show table status","command":"SHOW TABLE STATUS;"},
+  {"description":"Show the full process list","command":"SHOW FULL PROCESSLIST;"},
+  {"description":"Show profiles","command":"SHOW PROFILES;"},
+  {"description":"Show profile","command":"SHOW PROFILE;"},
+  {"description":"Show profile for a query","command":"SHOW PROFILE FOR QUERY query_id;"},
+  {"description":"Enable profiling","command":"SET PROFILING = ON;"},
+  {"description":"Disable profiling","command":"SET PROFILING = OFF;"},
+  {"description":"Explain a SELECT statement","command":"EXPLAIN SELECT column_name FROM table_name;"},
+  {"description":"Brute force a service with a list of usernames and passwords.","command":"hydra -l <username> -P <password_file> -f <ip> <service>"},
+  {"description":"Brute force a service on a specific port.","command":"hydra -l <username> -P <password_file> -f -s <port> <ip> <service>"},
+  {"description":"Set a timeout for the brute force attempt.","command":"hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -t <seconds>"},
+  {"description":"Set the number of threads for the brute force attempt.","command":"hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -T <threads>"},
+  {"description":"Enable verbose output.","command":"hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -v"},
+  {"description":"Specify a module to use for the brute force attempt.","command":"hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -e <module>"},
+  {"description":"Specify a subnet to use for the brute force attempt.","command":"hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -M <subnet_file>"},
+  {"description":"Specify a proxy to use for the brute force attempt.","command":"hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -x <proxy:port>"},
+  {"description":"Specify proxy credentials for the brute force attempt.","command":"hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -X <proxy:port:username:password>"},
+  {"description":"Specify a custom HTTP header for the brute force attempt.","command":"hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -H <header>"},
+  {"description":"Specify a path for digest authentication.","command":"hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -m <path>"},
+  {"description":"Specify a POST request for the brute force attempt.","command":"hydra -l <username> -P <password_file> -f -s <port> <ip> <service> http-post-form <path>"},
+  {"description":"Specify a GET request for the brute force attempt.","command":"hydra -l <username> -P <password_file> -f -s <port> <ip> <service> http-get-form <path>"},
+  {"description":"Specify a GET request for the brute force attempt.","command":"hydra -l <username> -P <password_file> -f -s <port> <ip> <service> http-get <path>"},
+  {"description":"List files and directories in the current directory","command":"ls"},
+  {"description":"Print the current working directory","command":"pwd"},
+  {"description":"Change the current working directory","command":"cd <directory>"},
+  {"description":"Copy files or directories","command":"cp <source> <destination>"},
+  {"description":"Move or rename files or directories","command":"mv <source> <destination>"},
+  {"description":"Remove or delete files","command":"rm <file>"},
+  {"description":"Create a new directory","command":"mkdir <directory>"},
+  {"description":"Remove an empty directory","command":"rmdir <directory>"},
+  {"description":"Create an empty file or update the access timestamp of a file","command":"touch <file>"},
+  {"description":"Display the contents of a file","command":"cat <file>"},
+  {"description":"Open a text file in the Nano text editor","command":"nano <file>"},
+  {"description":"Open a text file in the Vim text editor","command":"vim <file>"},
+  {"description":"Search for a pattern in a file","command":"grep '<pattern>' <file>"},
+  {"description":"Display information about running processes","command":"ps"},
+  {"description":"Display a dynamic view of system processes","command":"top"},
+  {"description":"Terminate a running process","command":"kill <process_id>"},
+  {"description":"Change file permissions","command":"chmod <permissions> <file>"},
+  {"description":"Change the owner and group of a file","command":"chown <user>:<group> <file>"},
+  {"description":"Display disk space usage","command":"df"},
+  {"description":"Display file and directory space usage","command":"du"},
+  {"description":"Display amount of free and used memory in the system","command":"free"},
+  {"description":"Display the manual page for a command","command":"man <command>"},
+  {"description":"Display additional information for a command","command":"info <command>"},
+  {"description":"Display the current date and time","command":"date"},
+  {"description":"Display a calendar","command":"cal"},
+  {"description":"Recursively copy directories","command":"cp -r <source> <destination>"},
+  {"description":"Recursively move or rename directories","command":"mv -r <source> <destination>"},
+  {"description":"Recursively remove directories and their contents","command":"rm -r <directory>"},
+  {"description":"Find the location of a file","command":"locate <file_name>"},
+  {"description":"Search for files in a directory by name","command":"find <directory> -name <file_name>"},
+  {"description":"Download files from the internet","command":"wget <URL>"},
+  {"description":"Create a compressed archive of a directory","command":"tar -czvf <archive_name.tar.gz> <directory>"},
+  {"description":"Extract files from a compressed archive","command":"tar -xzvf <archive_name.tar.gz>"},
+  {"description":"Connect to a remote server using SSH","command":"ssh <username>@<hostname>"},
+  {"description":"Copy files securely between a local and a remote machine","command":"scp <file> <username>@<hostname>:<destination_path>"},
+  {"description":"Execute a command with superuser privileges","command":"sudo <command>"},
+  {"description":"Display command history","command":"history"},
+  {"description":"Create a command alias","command":"alias <alias_name>='<command>'"},
+  {"description":"Display disk space usage in a human-readable format","command":"df -h"},
+  {"description":"view_all_users","command":"cat /etc/passwd"},
+  {"description":"add_user","command":"sudo adduser <username>"},
+  {"description":"set_password","command":"sudo passwd <username>"},
+  {"description":"add_to_group","command":"sudo usermod -aG <group_name> <username>"},
+  {"description":"print your computer name","command":"hostname"},
+  {"description":"Display information about network interfaces","command":"ifconfig"},
+  {"description":"Show IP addresses and details of network interfaces","command":"ip addr show"},
+  {"description":"Display wireless network interface configuration","command":"iwconfig"},
+  {"description":"Command-line client for NetworkManager, used for viewing and managing network connections","command":"nmcli"},
+  {"description":"Display a table of network interfaces and their statistics","command":"netstat -i"},
+  {"description":"Show or manipulate the IP routing table","command":"route"},
+  {"description":"Send ICMP Echo Request to a network host","command":"ping <hostname or IP address>"},
+  {"description":"Trace the route that packets take to reach a network host","command":"traceroute <hostname or IP address>"},
+  {"description":"Query DNS for information about a domain or IP address","command":"nslookup <hostname or IP address>"},
+  {"description":"DNS lookup utility for querying DNS name servers","command":"dig <hostname or IP address>"},
+  {"description":"Add a default gateway for routing","command":"route add default gw <gateway>"},
+  {"description":"Bring a network interface up","command":"ifconfig <interface> up"},
+  {"description":"Bring a network interface down","command":"ifconfig <interface> down"},
+  {"description":"Enable a network interface","command":"ip link set <interface> up"},
+  {"description":"Disable a network interface","command":"ip link set <interface> down"},
+  {"description":"Create a new network interface","command":"ip link add <new_interface> type <type>"},
+  {"description":"Delete a network interface","command":"ip link delete <interface>"},
+  {"description":"Tool for configuring packet filter rules in the Linux kernel","command":"iptables"},
+  {"description":"Command-line interface for managing firewalld firewall daemon","command":"firewall-cmd"},
+  {"description":"List all rules in all chains","command":"iptables -L"},
+  {"description":"List rules with numeric output for better readability","command":"iptables -L -n"},
+  {"description":"Append a rule to allow incoming traffic on a specific port","command":"iptables -A <chain> -p <protocol> --dport <port> -j ACCEPT"},
+  {"description":"Append a rule to allow outgoing traffic on a specific port","command":"iptables -A <chain> -p <protocol> --sport <port> -j ACCEPT"},
+  {"description":"Append a rule to block incoming traffic from a specific source IP address","command":"iptables -A <chain> -s <source_ip> -j DROP"},
+  {"description":"Append a rule to block outgoing traffic to a specific destination IP address","command":"iptables -A <chain> -d <destination_ip> -j DROP"},
+  {"description":"Delete a specific rule from a chain","command":"iptables -D <chain> <rule_number>"},
+  {"description":"Flush all rules, deleting all rules from all chains","command":"iptables -F"},
+  {"description":"Set the default policy for a chain (ACCEPT, DROP, or REJECT)","command":"iptables -P <chain> <policy>"},
+  {"description":"Save current iptables rules to a file","command":"iptables-save > <file_path>"},
+  {"description":"Restore iptables rules from a previously saved file","command":"iptables-restore < <file_path>"},
+  {"description":"Insert a logging rule into a specific position in a chain","command":"iptables -I <chain> <rule_number> -j LOG --log-prefix '<log_prefix>'"},
+  {"description":"Insert a rule to block traffic into a specific position in a chain","command":"iptables -I <chain> <rule_number> -j DROP"},
+  {"description":"Allow incoming traffic on a specific network interface","command":"iptables -A INPUT -i <interface> -j ACCEPT"},
+  {"description":"Allow outgoing traffic on a specific network interface","command":"iptables -A OUTPUT -o <interface> -j ACCEPT"},
+  {"description":"Allow forwarding traffic from one interface to another","command":"iptables -A FORWARD -i <in_interface> -o <out_interface> -j ACCEPT"},
+  {"description":"Perform a TCP SYN scan","command":"nmap -sS <target>"},
+  {"description":"Perform a TCP connect scan","command":"nmap -sT <target>"},
+  {"description":"Perform a UDP scan","command":"nmap -sU <target>"},
+  {"description":"Perform a TCP null scan","command":"nmap -sN <target>"},
+  {"description":"Perform a TCP FIN scan","command":"nmap -sF <target>"},
+  {"description":"Perform a TCP Xmas scan","command":"nmap -sX <target>"},
+  {"description":"Perform a TCP ACK scan","command":"nmap -sA <target>"},
+  {"description":"Perform a TCP Window scan","command":"nmap -sW <target>"},
+  {"description":"Perform a TCP Maimon scan","command":"nmap -sM <target>"},
+  {"description":"Perform a IP protocol scan","command":"nmap -sO <target>"},
+  {"description":"Probe open ports to determine service/version info","command":"nmap -sV <target>"},
+  {"description":"Determine the OS of the target","command":"nmap -O <target>"},
+  {"description":"Enable OS detection, version detection, script scanning, and traceroute","command":"nmap -A <target>"},
+  {"description":"Only scan specified ports","command":"nmap -p <port_range> <target>"},
+  {"description":"Scan all ports","command":"nmap -p- <target>"},
+  {"description":"Scan <number> most common ports","command":"nmap --top-ports <number> <target>"},
+  {"description":"UDP scan with version detection and default scripts","command":"nmap -sU -sV -sC --script=all <target>"},
+  {"description":"Run individual NSE scripts","command":"nmap --script=<script_name> <target>"},
+  {"description":"Provide arguments to NSE scripts","command":"nmap --script-args=<script_args> <target>"},
+  {"description":"Provide NSE script args from a file","command":"nmap --script-args-file=<file_name> <target>"},
+  {"description":"Display help for individual scripts","command":"nmap --script-help=<script_name>"},
+  {"description":"Show all data sent and received","command":"nmap --script-trace <target>"},
+  {"description":"Update the script database","command":"nmap --script-updatedb <target>"},
+  {"description":"Scan targets from a list in a file","command":"nmap -iL <input_file>"},
+  {"description":"Choose random targets","command":"nmap -iR <number>"},
+  {"description":"Exclude targets from a scan","command":"nmap --exclude <target1,target2,...>,<targetN>"},
+  {"description":"Exclude targets using a list in a file","command":"nmap --excludefile <exclude_file>"},
+  {"description":"Treat all hosts as online -- skip host discovery","command":"nmap -Pn <target>"},
+  {"description":"Verbose output","command":"nmap -v <target>"},
+  {"description":"Debugging output","command":"nmap -d <target>"},
+  {"description":"Display the reason a port is in a particular state","command":"nmap --reason <target>"},
+  {"description":"Only show open (or possibly open) ports","command":"nmap --open <target>"},
+  {"description":"Show all packets sent and received","command":"nmap --packet-trace <target>"},
+  {"description":"Set from 0 (light) to 9 (try all probes)","command":"nmap -sV --version-intensity <level> <target>"},
+  {"description":"Try the most likely probes (intensity 2)","command":"nmap -sV --version-light <target>"},
+  {"description":"Try all possible probes (intensity 9)","command":"nmap -sV --version-all <target>"},
+  {"description":"Some scripts require this option","command":"nmap --script-args=unsafe=1 <target>"},
+  {"description":"Enable IPv6 scanning","command":"nmap -6 <target>"},
+  {"description":"Disable port scan","command":"nmap -sn <target>"},
+  {"description":"Specify a network interface","command":"nmap -e <interface> <target>"},
+  {"description":"Spoof source address","command":"nmap -S <spoof_ip> <target>"},
+  {"description":"Relay connections through HTTP/SOCKS4 proxies","command":"nmap --proxies <proxy_list> <target>"},
+  {"description":"Append random data to sent packets","command":"nmap --data-length <size> <target>"},
+  {"description":"Send packets from a specified source port","command":"nmap --source-port <port> <target>"},
+  {"description":"Number of probes in parallel","command":"nmap --min-parallelism <number> <target>"},
+  {"description":"Maximum number of probes in parallel","command":"nmap --max-parallelism <number> <target>"},
+  {"description":"Minimum host group size","command":"nmap --min-hostgroup <number> <target>"},
+  {"description":"Maximum host group size","command":"nmap --max-hostgroup <number> <target>"},
+  {"description":"Specified in milliseconds","command":"nmap --min-rtt-timeout <time> <target>"},
+  {"description":"Specified in milliseconds","command":"nmap --max-rtt-timeout <time> <target>"},
+  {"description":"Specified in milliseconds","command":"nmap --initial-rtt-timeout <time> <target>"},
+  {"description":"Adjust delay between packets","command":"nmap --max-scan-delay <time> <target>"},
+  {"description":"Adjust delay between packets","command":"nmap --scan-delay <time> <target>"},
+  {"description":"Set the max number of port scan probe retransmissions","command":"nmap --max-retries <number> <target>"},
+  {"description":"Give up on target after this long","command":"nmap --host-timeout <time> <target>"},
+  {"description":"The script itself may set a lower timeout","command":"nmap --script-timeout <time> <target>"},
+  {"description":"Set from 0 (light) to 9 (try all probes)","command":"nmap --version-intensity <level> <target>"},
+  {"description":"Try the most likely probes (intensity 2)","command":"nmap --version-light <target>"},
+  {"description":"Try all possible probes (intensity 9)","command":"nmap --version-all <target>"},
+  {"description":"Send packets no slower than <number> per second","command":"nmap --min-rate <number> <target>"},
+  {"description":"Send packets no faster than <number> per second","command":"nmap --max-rate <number> <target>"},
+  {"description":"Defeat reset rate limits","command":"nmap --defeat-rst-ratelimit <target>"},
+  {"description":"Set your specified offset size","command":"nmap --mtu <val> <target>"},
+  {"description":"Use specified IP options","command":"nmap --ip-options <options> <target>"},
+  {"description":"Set IP time-to-live field","command":"nmap --ttl <value> <target>"},
+  {"description":"Spoof your MAC address","command":"nmap --spoof-mac <macaddress/prefix/vendor name> <target>"},
+  {"description":"Send packets with a bogus TCP/UDP/SCTP checksum","command":"nmap --badsum <target>"},
+  {"description":"Cloak a scan with decoys","command":"nmap -D <decoy1,decoy2,...,decoyN> <target>"},
+  {"description":"Relay connections through HTTP/SOCKS4 proxies","command":"nmap --proxies <file> <target>"},
+  {"description":"Append a custom payload to sent packets","command":"nmap --data <hex_string> <target>"},
+  {"description":"Scan the addresses in random order","command":"nmap --randomize-hosts <target>"},
+  {"description":"List Scan - simply list targets to scan","command":"nmap -sL <target>"},
+  {"description":"TCP SYN/ACK, UDP or SCTP discovery to given ports","command":"nmap -PS/PA/PU/PY[portlist] <target>"},
+  {"description":"ICMP echo, timestamp, and netmask request discovery probes","command":"nmap -PE/PP/PM <target>"},
+  {"description":"IP Protocol Ping","command":"nmap -PO[protocol list] <target>"},
+  {"description":"Never do DNS resolution/Always resolve [default: sometimes]","command":"nmap -n/-R <target>"},
+  {"description":"Specify custom DNS servers","command":"nmap --dns-servers <servers> <target>"},
+  {"description":"Use OS's DNS resolver","command":"nmap --system-dns <target>"},
+  {"description":"Trace hop path to each host","command":"nmap --traceroute <target>"},
+  {"description":"Use given port number","command":"nmap -g/--source-port <portnum> <target>"},
+  {"description":"Perform brute force password auditing against FTP servers","command":"nmap --script=ftp-brute <target>"},
+  {"description":"Perform brute force password auditing against HTTP servers","command":"nmap --script=http-brute <target>"},
+  {"description":"Perform brute force password auditing against IMAP servers","command":"nmap --script=imap-brute <target>"},
+  {"description":"Perform brute force password auditing against POP3 servers","command":"nmap --script=pop3-brute <target>"},
+  {"description":"Perform brute force password auditing against SMTP servers","command":"nmap --script=smtp-brute <target>"},
+  {"description":"Perform brute force community string auditing against SNMP servers","command":"nmap --script=snmp-brute <target>"},
+  {"description":"Perform brute force password auditing against SSH servers","command":"nmap --script=ssh-brute <target>"},
+  {"description":"Perform brute force password auditing against Telnet servers","command":"nmap --script=telnet-brute <target>"},
+  {"description":"Perform brute force password auditing against VMware Authentication Daemon","command":"nmap --script=vmauthd-brute <target>"},
+  {"description":"Perform brute force password auditing against VNC servers","command":"nmap --script=vnc-brute <target>"},
+  {"description":"Perform brute force password auditing against XMPP servers","command":"nmap --script=xmpp-brute <target>"},
+  {"description":"Perform brute force password auditing against SMB servers","command":"nmap --script=smb-brute <target>"},
+  {"description":"Perform brute force password auditing against RDP servers","command":"nmap --script=rdp-brute <target>"},
+  {"description":"Perform brute force password auditing against Microsoft SQL servers","command":"nmap --script=ms-sql-brute <target>"},
+  {"description":"Perform brute force password auditing against Oracle servers","command":"nmap --script=oracle-brute <target>"},
+  {"description":"Perform brute force password auditing against MySQL servers","command":"nmap --script=mysql-brute <target>"},
+  {"description":"Perform brute force password auditing against PostgreSQL servers","command":"nmap --script=pgsql-brute <target>"},
+  {"description":"Perform brute force password auditing against MSSQL servers","command":"nmap --script=mssql-brute <target>"},
+  {"description":"Perform brute force password auditing against Cisco devices with enabled services","command":"nmap --script=cisco-enable-brute <target>"},
+  {"description":"Perform brute force password auditing against SIP servers","command":"nmap --script=sip-brute <target>"},
+  {"description":"Attempt to bypass authentication for running services","command":"nmap --script=auth <target>"},
+  {"description":"Determine if target is broadcasting","command":"nmap --script=broadcast <target>"},
+  {"description":"Perform brute force password auditing against services","command":"nmap --script=brute <target>"},
+  {"description":"Default set of scripts to reduce target spew","command":"nmap --script=default <target>"},
+  {"description":"Attempt to query running services for further information","command":"nmap --script=discovery <target>"},
+  {"description":"Detect various dos scenarios","command":"nmap --script=dos <target>"},
+  {"description":"Attempt to exploit a service","command":"nmap --script=exploit <target>"},
+  {"description":"Checks using a list of external scripts","command":"nmap --script=external <target>"},
+  {"description":"Launch fuzzing attacks","command":"nmap --script=fuzzer <target>"},
+  {"description":"Intrusive scripts (Vuln, safe)","command":"nmap --script=intrusive <target>"},
+  {"description":"Scans for backdoor ports","command":"nmap --script=malware <target>"},
+  {"description":"Safe scripts that won't crash the target","command":"nmap --script=safe <target>"},
+  {"description":"Attempt to retrieve the version number of a service","command":"nmap --script=version <target>"},
+  {"description":"Checks for vulnerabilities","command":"nmap --script=vuln <target>"},
+  {"description":"Enumerate HTTP services","command":"nmap --script=http-enum <target>"},
+  {"description":"Checks for the CVE-2010-2861 vulnerability in Apache Struts","command":"nmap --script=http-vuln-cve2010-2861 <target>"},
+  {"description":"Checks for the CVE-2012-1823 vulnerability in Oracle WebLogic Server","command":"nmap --script=http-vuln-cve2012-1823 <target>"},
+  {"description":"Checks for the CVE-2013-0156 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2013-0156 <target>"},
+  {"description":"Checks for the CVE-2013-1862 vulnerability in Apache Tomcat","command":"nmap --script=http-vuln-cve2013-1862 <target>"},
+  {"description":"Checks for the CVE-2013-2038 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2013-2038 <target>"},
+  {"description":"Checks for the CVE-2013-2065 vulnerability in Apache Tomcat","command":"nmap --script=http-vuln-cve2013-2065 <target>"},
+  {"description":"Checks for the CVE-2013-2251 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2013-2251 <target>"},
+  {"description":"Checks for the CVE-2013-5704 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2013-5704 <target>"},
+  {"description":"Checks for the CVE-2014-0038 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2014-0038 <target>"},
+  {"description":"Checks for the CVE-2014-0050 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2014-0050 <target>"},
+  {"description":"Checks for the CVE-2014-3704 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2014-3704 <target>"},
+  {"description":"Checks for the CVE-2014-7911 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2014-7911 <target>"},
+  {"description":"Checks for the CVE-2015-1427 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2015-1427 <target>"},
+  {"description":"Checks for the CVE-2015-1635 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2015-1635 <target>"},
+  {"description":"Checks for the CVE-2015-4000 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2015-4000 <target>"},
+  {"description":"Checks for the CVE-2015-5612 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2015-5612 <target>"},
+  {"description":"Checks for the CVE-2016-0735 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2016-0735 <target>"},
+  {"description":"Checks for the CVE-2016-10033 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2016-10033 <target>"},
+  {"description":"Checks for the CVE-2016-4470 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2016-4470 <target>"},
+  {"description":"Checks for the CVE-2016-4975 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2016-4975 <target>"},
+  {"description":"Checks for the CVE-2016-5387 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2016-5387 <target>"},
+  {"description":"Checks for the CVE-2016-5388 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2016-5388 <target>"},
+  {"description":"Checks for the CVE-2016-6663 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2016-6663 <target>"},
+  {"description":"Checks for the CVE-2017-3169 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2017-3169 <target>"},
+  {"description":"Checks for the CVE-2017-7679 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2017-7679 <target>"},
+  {"description":"Checks for the CVE-2017-8917 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2017-8917 <target>"},
+  {"description":"Checks for the CVE-2017-9798 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2017-9798 <target>"},
+  {"description":"Checks for the CVE-2018-1312 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2018-1312 <target>"},
+  {"description":"Checks for the CVE-2018-18778 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2018-18778 <target>"},
+  {"description":"Checks for the CVE-2019-0217 vulnerability in Apache HTTP Server","command":"nmap --script=http-vuln-cve2019-0217 <target>"},
+  {"description":"Retrieve the banner of the service","command":"nmap --script=banner <target>"},
+  {"description":"Retrieve HTTP headers for a target","command":"nmap --script=http-headers <target>"},
+  {"description":"Retrieve HTTP methods supported by a target","command":"nmap --script=http-methods <target>"},
+  {"description":"Retrieve NTLM authentication information","command":"nmap --script=http-ntlm-info <target>"},
+  {"description":"Detect PHP version of the target","command":"nmap --script=http-php-version <target>"},
+  {"description":"Retrieve robots.txt file from a target","command":"nmap --script=http-robots.txt <target>"},
+  {"description":"Retrieve security headers from a target","command":"nmap --script=http-security-headers <target>"},
+  {"description":"Retrieve server header from a target","command":"nmap --script=http-server-header <target>"},
+  {"description":"Retrieve the title of the webpage","command":"nmap --script=http-title <target>"},
+  {"description":"Enumerate user directories on a target","command":"nmap --script=http-userdir-enum <target>"},
+  {"description":"Retrieve IMAP capabilities","command":"nmap --script=imap-capabilities <target>"},
+  {"description":"Retrieve information from a Microsoft SQL server","command":"nmap --script=ms-sql-info <target>"},
+  {"description":"Retrieve databases from a MySQL server","command":"nmap --script=mysql-databases <target>"},
+  {"description":"Test if a MySQL server allows login by an empty password","command":"nmap --script=mysql-empty-password <target>"},
+  {"description":"Retrieve information from a MySQL server","command":"nmap --script=mysql-info <target>"},
+  {"description":"Retrieve variables from a MySQL server","command":"nmap --script=mysql-variables <target>"},
+  {"description":"Retrieve TNS version from an Oracle server","command":"nmap --script=oracle-tns-version <target>"},
+  {"description":"Retrieve POP3 capabilities","command":"nmap --script=pop3-capabilities <target>"},
+  {"description":"Retrieve SMTP commands from a target","command":"nmap --script=smtp-commands <target>"},
+  {"description":"Retrieve interfaces from a SNMP server","command":"nmap --script=snmp-interfaces <target>"},
+  {"description":"Retrieve SSL certificate information","command":"nmap --script=ssl-cert <target>"},
+  {"description":"Enumerate SSL ciphers","command":"nmap --script=ssl-enum-ciphers <target>"},
+  {"description":"Retrieve NTLM authentication information from a Telnet server","command":"nmap --script=telnet-ntlm-info <target>"},
+  {"description":"Retrieve vulnerabilities from the CVE database","command":"nmap --script=vulners.nse <target>"},
+  {"description":"Retrieve vulnerabilities from the Nessus vulnerability database","command":"nmap --script=vulscan <target>"},
+  {"description":"Enumerate SMB shares","command":"nmap --script=smb-enum-shares <target>"},
+  {"description":"Enumerate SMB users","command":"nmap --script=smb-enum-users <target>"},
+  {"description":"Discover the operating system of a SMB server","command":"nmap --script=smb-os-discovery <target>"},
+  {"description":"Retrieve the security mode of a SMB server","command":"nmap --script=smb-security-mode <target>"},
+  {"description":"Retrieve server statistics from a SMB server","command":"nmap --script=smb-server-stats <target>"},
+  {"description":"Retrieve system information from a SMB server","command":"nmap --script=smb-system-info <target>"},
+  {"description":"Retrieve network statistics from a SNMP server","command":"nmap --script=snmp-netstat <target>"},
+  {"description":"Retrieve processes from a SNMP server","command":"nmap --script=snmp-processes <target>"},
+  {"description":"Retrieve the system description from a SNMP server","command":"nmap --script=snmp-sysdescr <target>"},
+  {"description":"Retrieve Windows services from a SNMP server","command":"nmap --script=snmp-win32-services <target>"},
+  {"description":"Retrieve Windows shares from a SNMP server","command":"nmap --script=snmp-win32-shares <target>"},
+  {"description":"Retrieve Windows software from a SNMP server","command":"nmap --script=snmp-win32-software <target>"},
+  {"description":"Retrieve Windows users from a SNMP server","command":"nmap --script=snmp-win32-users <target>"},
+  {"description":"Connect to a remote server","command":"ssh user@host"},
+  {"description":"Connect to a remote server using a specific port","command":"ssh -p port user@host"},
+  {"description":"Connect to a remote server using a specific key file","command":"ssh -i keyfile user@host"},
+  {"description":"Enable X11 forwarding","command":"ssh -X user@host"},
+  {"description":"Enable trusted X11 forwarding","command":"ssh -Y user@host"},
+  {"description":"Enable agent forwarding","command":"ssh -A user@host"},
+  {"description":"Create a local port forward","command":"ssh -L local_port:host:remote_port user@host"},
+  {"description":"Create a remote port forward","command":"ssh -R remote_port:host:local_port user@host"},
+  {"description":"Create a dynamic application-level port forward","command":"ssh -D port user@host"},
+  {"description":"Do not execute a remote command","command":"ssh -N user@host"},
+  {"description":"Put SSH in the background","command":"ssh -f user@host sleep time"},
+  {"description":"Generate a new SSH key pair","command":"ssh-keygen -t type"},
+  {"description":"Install your public key in a remote server's authorized_keys","command":"ssh-copy-id -i keyfile user@host"},
+  {"description":"Add a private key to the authentication agent","command":"ssh-add keyfile"},
+  {"description":"Start the SSH agent in the background","command":"ssh-agent bash"},
+  {"description":"Start the SSH agent for the current shell","command":"ssh-agent $SHELL"},
+  {"description":"Kill the SSH agent","command":"ssh-agent -k"},
+  {"description":"Get the public key of a remote server","command":"ssh-keyscan -t type host"},
+  {"description":"Secure copy (remote file copy program)","command":"scp source user@host:destination"},
+  {"description":"Secure file transfer program","command":"sftp user@host"},
+  {"description":"Mount a remote directory","command":"sshfs user@host:remote_dir local_dir"},
+  {"description":"Execute a command on a remote server","command":"ssh user@host command"},
+  {"description":"Execute a local script on a remote server","command":"ssh user@host 'bash -s' < script.sh"},
+  {"description":"Execute a command with a pseudo-terminal","command":"ssh -t user@host top"},
+  {"description":"Execute a command as another user","command":"ssh user@host 'sudo command'"},
+  {"description":"Monitor a remote log file","command":"ssh user@host tail -f /var/log/syslog"},
+  {"description":"Set up a reverse shell","command":"ssh user@host nc -l port"},
+  {"description":"Set up a bind shell","command":"ssh user@host nc host port"},
+  {"description":"Remove a host key from the known_hosts file","command":"ssh user@host 'ssh-keygen -R host'"},
+  {"description":"Regenerate the host keys","command":"ssh user@host 'ssh-keygen -A'"},
+  {"description":"Monitor the systemd journal","command":"ssh user@host 'journalctl -f'"},
+  {"description":"Check the status of a service","command":"ssh user@host 'systemctl status service'"},
+  {"description":"Start a service","command":"ssh user@host 'systemctl start service'"},
+  {"description":"Stop a service","command":"ssh user@host 'systemctl stop service'"},
+  {"description":"Restart a service","command":"ssh user@host 'systemctl restart service'"},
+  {"description":"Reload a service","command":"ssh user@host 'systemctl reload service'"},
+  {"description":"Enable a service to start on boot","command":"ssh user@host 'systemctl enable service'"},
+  {"description":"Disable a service to start on boot","command":"ssh user@host 'systemctl disable service'"},
+  {"description":"Check if a service is active","command":"ssh user@host 'systemctl is-active service'"},
+  {"description":"Check if a service is enabled","command":"ssh user@host 'systemctl is-enabled service'"},
+  {"description":"List all services","command":"ssh user@host 'systemctl list-units --type service'"},
+  {"description":"List enabled services","command":"ssh user@host 'systemctl list-unit-files --state enabled'"},
+  {"description":"List disabled services","command":"ssh user@host 'systemctl list-unit-files --state disabled'"},
+  {"description":"List dependencies of a service","command":"ssh user@host 'systemctl list-dependencies service'"},
+  {"description":"Show the service file","command":"ssh user@host 'systemctl cat service'"},
+  {"description":"Edit the service file","command":"ssh user@host 'systemctl edit service'"},
+  {"description":"Mask a service","command":"ssh user@host 'systemctl mask service'"},
+  {"description":"Unmask a service","command":"ssh user@host 'systemctl unmask service'"},
+  {"description":"Revert a service to its vendor version","command":"ssh user@host 'systemctl revert service'"},
+  {"description":"Enable/disable a service based on preset files","command":"ssh user@host 'systemctl preset service'"},
+  {"description":"Check if the system is running","command":"ssh user@host 'systemctl is-system-running'"},
+  {"description":"List jobs","command":"ssh user@host 'systemctl list-jobs'"},
+  {"description":"List timers","command":"ssh user@host 'systemctl list-timers'"},
+  {"description":"List sockets","command":"ssh user@host 'systemctl list-sockets'"},
+  {"description":"List machines","command":"ssh user@host 'systemctl list-machines'"},
+  {"description":"List unit files","command":"ssh user@host 'systemctl list-unit-files'"},
+  {"description":"List units","command":"ssh user@host 'systemctl list-units'"},
+  {"description":"Show properties of a service","command":"ssh user@host 'systemctl show service'"},
+  {"description":"Set a property of a service","command":"ssh user@host 'systemctl set-property service property=value'"},
+  {"description":"Unset a property of a service","command":"ssh user@host 'systemctl unset-property service property'"},
+  {"description":"Reload or restart a service","command":"ssh user@host 'systemctl reload-or-restart service'"},
+  {"description":"Enter rescue mode for a service","command":"ssh user@host 'systemctl rescue service'"},
+  {"description":"Mount an image","command":"ssh user@host 'systemctl mount-image image'"},
+  {"description":"Unmount an image","command":"ssh user@host 'systemctl unmount-image image'"},
+  {"description":"Enable linger for a user","command":"ssh user@host 'systemctl enable-linger user'"},
+  {"description":"Disable linger for a user","command":"ssh user@host 'systemctl disable-linger user'"},
+  {"description":"Check if linger is enabled for a user","command":"ssh user@host 'systemctl is-enabled-linger user'"},
+  {"description":"Reload systemd manager configuration","command":"ssh user@host 'systemctl daemon-reload'"},
+  {"description":"Reexecute systemd manager","command":"ssh user@host 'systemctl daemon-reexec'"},
+  {"description":"Enter system default mode","command":"ssh user@host 'systemctl default'"},
+  {"description":"Enter system emergency mode","command":"ssh user@host 'systemctl emergency'"},
+  {"description":"Shut down and halt the system","command":"ssh user@host 'systemctl halt'"},
+  {"description":"Shut down and power-off the system","command":"ssh user@host 'systemctl poweroff'"},
+  {"description":"Shut down and reboot the system","command":"ssh user@host 'systemctl reboot'"},
+  {"description":"Shut down and load a new kernel","command":"ssh user@host 'systemctl kexec'"},
+  {"description":"Suspend the system","command":"ssh user@host 'systemctl suspend'"},
+  {"description":"Hibernate the system","command":"ssh user@host 'systemctl hibernate'"},
+  {"description":"Hibernate and suspend the system","command":"ssh user@host 'systemctl hybrid-sleep'"},
+  {"description":"Enter system rescue mode","command":"ssh user@host 'systemctl rescue'"},
+  {"description":"Shut down the system with an exit code","command":"ssh user@host 'systemctl exit [EXIT_CODE]'"},
+  {"description":"Wait until the system is running","command":"ssh user@host 'systemctl is-system-running --wait'"},
+  {"description":"Show help for the is-system-running command","command":"ssh user@host 'systemctl is-system-running --help'"},
+  {"description":"Show version for the is-system-running command","command":"ssh user@host 'systemctl is-system-running --version'"},
+  {"description":"Be quiet for the is-system-running command","command":"ssh user@host 'systemctl is-system-running --quiet'"},
+  {"description":"Initialize a new Git repository in the current directory","command":"git init"},
+  {"description":"Clone a remote repository to your local machine","command":"git clone <repository>"},
+  {"description":"Stage changes for the next commit","command":"git add <file>"},
+  {"description":"Stage all changes for the next commit","command":"git add ."},
+  {"description":"Commit staged changes with a descriptive message","command":"git commit -m '<message>'"},
+  {"description":"View the status of your working directory","command":"git status"},
+  {"description":"Display the commit history","command":"git log"},
+  {"description":"List all branches in the repository","command":"git branch"},
+  {"description":"Create a new branch","command":"git branch <branch_name>"},
+  {"description":"Switch to a different branch","command":"git checkout <branch_name>"},
+  {"description":"Merge changes from another branch into the current branch","command":"git merge <branch_name>"},
+  {"description":"Fetch changes from the remote repository and merge them into the current branch","command":"git pull"},
+  {"description":"Push committed changes to the remote repository","command":"git push"},
+  {"description":"View the remote repositories associated with your local repository","command":"git remote -v"},
+  {"description":"Fetch changes from the remote repository without merging","command":"git fetch"},
+  {"description":"Show the differences between the working directory and the last commit","command":"git diff"},
+  {"description":"Remove a file from both the working directory and the Git repository","command":"git rm <file>"},
+  {"description":"Rename or move a file and stage the changes","command":"git mv <old_file> <new_file>"},
+  {"description":"Unstage changes for the specified file","command":"git reset <file>"},
+  {"description":"Discard all changes in the working directory and staging area","command":"git reset --hard"},
+  {"description":"Display the commit history in one line per commit","command":"git log --oneline"},
+  {"description":"Add a new remote repository","command":"git remote add <remote_name> <repository_url>"},
+  {"description":"Delete a local branch","command":"git branch -d <branch_name>"},
+  {"description":"Delete a remote branch","command":"git push <remote_name> --delete <branch_name>"},
+  {"description":"Create a lightweight tag for the current commit","command":"git tag <tag_name>"},
+  {"description":"Create an annotated tag for the current commit","command":"git tag -a <tag_name> -m '<tag_message>'"},
+  {"description":"Push tags to the remote repository","command":"git push --tags"},
+  {"description":"Set your global Git username","command":"git config --global user.name 'Your Name'"},
+  {"description":"Set your global Git email","command":"git config --global user.email 'your.email@example.com'"},
+  {"description":"Stash changes in the working directory for later use","command":"git stash"},
+  {"description":"Apply the most recently stashed changes","command":"git stash apply"},
+  {"description":"List all stashes","command":"git stash list"},
+  {"description":"Remove untracked files and directories from the working directory","command":"git clean -fd"},
+  {"description":"Show information about a remote repository","command":"git remote show <remote_name>"},
+  {"description":"Initialize and update submodules","command":"git submodule update --init --recursive"},
+  {"description":"Display a compact and graph-like commit history","command":"git log --graph --oneline --all"},
+  {"description":"Search for a pattern in the working directory","command":"git grep '<pattern>'"},
+  {"description":"Start a binary search for the commit that introduced a bug","command":"git bisect start"},
+  {"description":"Mark a commit as good during the binary search","command":"git bisect good <commit_hash>"},
+  {"description":"Mark a commit as bad during the binary search","command":"git bisect bad <commit_hash>"},
+  {"description":"Finish the binary search and return to the original branch","command":"git bisect reset"},
+  {"description":"Create a zip archive of a specific branch","command":"git archive --format=zip --output=<output_filename> <branch_name>"},
+  {"description":"Rename a remote repository","command":"git remote rename <old_remote_name> <new_remote_name>"},
+  {"description":"View a log of reference changes (useful for recovering lost commits)","command":"git reflog"},
+  {"description":"Apply the changes introduced by a specific commit to the current branch","command":"git cherry-pick <commit_hash>"},
+  {"description":"Remove remote branches that no longer exist on the remote repository","command":"git remote prune <remote_name>"},
+  {"description":"Customize the format of the commit history display","command":"git log --pretty=format:'%h - %an, %ar : %s'"},
+  {"description":"Search for a pattern in the staging area","command":"git grep --cached '<pattern>'"},
+  {"description":"Show commits since a specific date or time","command":"git log --since='1 week ago'"},
+  {"description":"Show who last modified each line in a file","command":"git blame <file>"},
+  {"description":"Get the current branch name","command":"git rev-parse --abbrev-ref HEAD"},
+  {"description":"Display the commit history excluding merge commits","command":"git log --no-merges"},
+  {"description":"Create a global Git alias","command":"git config --global alias.<alias_name> '<command>'"},
+  {"description":"Fetch changes from all remote repositories","command":"git remote update"},
+  {"description":"Search for commits with a specific message pattern","command":"git log --grep='<pattern>'"},
+  {"description":"Search for commits that introduced or removed a specific string","command":"git log -p -S '<string>'"},
+  {"description":"Show who last modified the specified lines in a file","command":"git blame -L <start>,<end> <file>"},
+  {"description":"Display the commit history in reverse order","command":"git log --reverse"},
+  {"description":"Show the differences between two branches","command":"git diff <branch1>..<branch2>"},
+  {"description":"Show commits unique to the right branch in a three-dot range","command":"git log --cherry-pick --right-only --no-merges <branch1>...<branch2>"},
+  {"description":"Display a commit history graph with all branches and tags","command":"git log --graph --all --decorate"},
+  {"description":"Display a compact commit history graph with all branches and tags","command":"git log --oneline --graph --all --decorate"},
+  {"description":"Show commits by a specific author","command":"git log --author='<author_name>'"},
+  {"description":"Show the changes introduced by a specific commit","command":"git show <commit_hash>"},
+  {"description":"Show the names of files that differ between two branches","command":"git diff --name-only <branch1>..<branch2>"},
+  {"description":"Fetch changes from the remote repository and reapply local commits on top","command":"git pull --rebase"},
+  {"description":"Fetch changes from the remote repository and remove references to deleted branches","command":"git fetch --prune"},
+  {"description":"Show commits within a specific date range","command":"git log --since='2 weeks ago' --until='1 week ago'"},
+  {"description":"Display a commit history graph with abbreviated commit hashes and commit messages","command":"git log --pretty=format:'%h %s' --graph"},
+  {"description":"Display a commit history graph with abbreviated commit hashes, commit messages, and short date format","command":"git log --pretty=format:'%h %s' --graph --date=short"},
+  {"description":"Show the differences between the last two commits","command":"git diff HEAD^ HEAD"},
+  {"description":"Display a commit history graph with all branches highlighted","command":"git log --oneline --graph --all --branches"},
+  {"description":"Count the total number of commits in the repository","command":"git rev-list --all --count"},
+  {"description":"test1234","command":"test"}
 ]

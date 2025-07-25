@@ -1,0 +1,18 @@
+[
+  {"description":"GREP to search directory recursively for keyword 'password'","command":"grep -nr password"},
+  {"description":"Start a simple Python HTTP server on port 9000","command":"python3 -m http.server 9000"},
+  {"description":"Start a netcat (nc) server listening on port 4444","command":"nc -lvnp 4444"},
+  {"description":"Check open TCP and UDP ports","command":"sudo netstat -tuln"},
+  {"description":"Install a .deb package file","command":"sudo dpkg -i file.deb"},
+  {"description":"Install an RPM package file","command":"rpm -i filename.rpm"},
+  {"description":"Remove or uninstall a package (Debian/Ubuntu)","command":"sudo apt-get remove <package-name>"},
+  {"description":"Check used disk space in human-readable format","command":"df -h"},
+  {"description":"Start Bettercap for network reconnaissance","command":"sudo bettercap"},
+  {"description":"Enable network probing in Bettercap","command":"net.probe on"},
+  {"description":"Show network information in Bettercap","command":"net.show"},
+  {"description":"Set ARP spoof targets (replace <targets> with IPs) in Bettercap","command":"set arp.spoof.targets <targets>"},
+  {"description":"Enable ARP spoofing in Bettercap","command":"arp.spoof on"},
+  {"description":"Enable network sniffing in Bettercap","command":"net.sniff on"},
+  {"description":"Record terminal session into a cast file","command":"asciinema rec demo.cast"},
+  {"description":"Convert cast file to GIF","command":"agg demo.cast demo.gif"}
+]

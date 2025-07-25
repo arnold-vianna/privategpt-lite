@@ -1,0 +1,6 @@
+# Ignore local dev stuff
+__pycache__/
+*.pyc
+*.pkl
+*.faiss
+.env
