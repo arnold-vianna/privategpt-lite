@@ -56,7 +56,10 @@ docker build -t privategpt-lite .
 docker run -p 8501:8501 arnoldvianna/privategpt-lite:latest
 ```
 
-
+```console
+# web UI
+http://0.0.0.0:8501
+```
 
 
 ##  💡 Use Cases
