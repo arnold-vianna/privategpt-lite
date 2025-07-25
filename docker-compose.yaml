@@ -1,0 +1,19 @@
+
+
+services:
+  privategpt:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - PERSIST_DIRECTORY=/app/data
+    command: >
+      /bin/sh -c "
+      if [ ! -f /app/data/index.faiss ]; then
+        echo '[INFO] Running document ingestion...';
+        python ingest.py --source_dir /app/source_documents --persist_dir /app/data;
+      else
+        echo '[INFO] FAISS index already exists. Skipping ingestion.';
+      fi &&
+      streamlit run app.py --server.port=8501 --server.address=0.0.0.0
+      "
