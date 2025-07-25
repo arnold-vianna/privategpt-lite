@@ -1,34 +1,85 @@
-/source_documents dir is were data is stored
-
-after adding new data run
-
-run the ingest.py to load the data
-
-
-python3 -m venv venv-name
-source venv-name/bin/activate
-pip install -r requirements.txt 
-
-run the ingest.py to load the data
-
-docker build -t arnoldvianna/privategpt-lite .
-docker run -p 8501:8501 arnoldvianna/privategpt-lite
-
-docker tag arnoldvianna/privategpt-lite arnoldvianna/privategpt-lite:latest
-
-docker push arnoldvianna/privategpt-lite:latest
-
-or i used  sudo docker-compose up -d 
+<p align=center>
+  <br>
+  <a href="https://github.com/arnold-vianna?tab=repositories" target="_blank"><img src="https://avatars.githubusercontent.com/u/113808475?v=4"/></a>
+  <br>
+  <span>check out my website <a href="https://arnold-vianna.github.io/">arnold-vianna.github.io</a></span>
+  <br>
+</p>
 
 
-http://localhost:8501
+
+#  PrivateGPT Lite — Ask Your Documents Locally
 
 
-Step 8: Push to Docker Hub
+
+<img src="https://i.imgur.com/5R9qHpK.png" title="source: imgur.com" /></a>
+
+## Key Features 
+
+- ⚙️ 100% CPU-only — no GPU or cloud required  
+
+- 📚 Easily ingest `.json`, `.txt`, or `.sqlite` files  
+
+- 🔍 FAISS-powered local semantic search  
+
+- 📖 Query your knowledge base using a Streamlit interface 
+
+- 🧠 Perfect for cheat sheets, command lookup, network admin, coding docs  
+
+- 🔐 Keeps all your data private and offline  
+
+- 🚀 Run from Docker or source 
 
 
-docker tag arnoldvianna/privategpt-lite arnoldvianna/privategpt-lite:latest
-docker push arnoldvianna/privategpt-lite:latest
+## via dockerhub command
+
+ ```console
+sudo docker run -d -p 8501:8501 arnoldvianna/privategpt-lite
+```
+
+## Setup 
 
 
-PrivateGPT Lite is designed to run efficiently with minimal resources, requiring no GPU, making it perfect for smooth operation on CPU alone. This lightweight setup allows you to harness the power of private, local AI processing without heavy hardware demands. You can easily expand its knowledge by adding more items—such as documents, JSON files, or SQLite databases—through a simple ingestion process, updating the FAISS index to include new content. Ideal as an intelligent cheat sheet or smart index, it enables quick retrieval of commands, descriptions, or relevant information, serving as a personalized knowledge base for tasks like network administration or coding, all accessible via an intuitive Streamlit interface.
+```console
+# Clone the repo
+git clone https://github.com/arnoldvianna/privategpt-lite.git
+cd privategpt-lite
+```
+
+```console
+# Build the Docker image
+docker build -t privategpt-lite .
+```
+
+```console
+# Run the container
+docker run -p 8501:8501 arnoldvianna/privategpt-lite:latest
+```
+
+
+
+
+##  💡 Use Cases
+
+
+
+    🔧 Personal sysadmin or dev cheat sheet
+
+    📚 Index and search your own documentation
+
+    🚫 Offline, private alternative to ChatGPT
+
+    👨‍💻 Smart helper for learning, coding, or reverse engineering
+
+
+
+
+
+
+##  Runing
+
+* Qr  image is saved to the sane dir ad the app.py
+
+* place the path to the URL in line 77
+
+* place the path to the logo in line 78
