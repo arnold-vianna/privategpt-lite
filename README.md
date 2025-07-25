@@ -12,8 +12,7 @@
 
 
 
-<img src="[https://i.imgur.com/5R9qHpK.png](https://i.imgur.com/MSecm4s.png)" title="source: imgur.com" /></a>
-
+<img src="https://i.imgur.com/MSecm4s.png" title="source: img
 ## Key Features 
 
 - ⚙️ 100% CPU-only — no GPU or cloud required  
